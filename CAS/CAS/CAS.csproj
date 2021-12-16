@@ -52,6 +52,7 @@
     <Compile Include="aboneEkle.Designer.cs">
       <DependentUpon>aboneEkle.cs</DependentUpon>
     </Compile>
+    <Compile Include="fonksiyon.cs" />
     <Compile Include="kullaniciGiris.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -18,13 +18,11 @@ namespace CAS
         {
             InitializeComponent();
         }
-
         
-
-        private void MainForm_Load(object sender, EventArgs e)
+        public void MainForm_Load(object sender, EventArgs e)
         {
-            
             //navBar.Enabled = false;
+            mainPanel.Controls.Clear();
             kullaniciGiris kg = new kullaniciGiris();
             kg.Dock = DockStyle.None;
             mainPanel.Width = kg.Width;
@@ -35,9 +33,10 @@ namespace CAS
             Width = kg.Width + 40;
             Height = kg.Height + 83;
             kg.Show();
+            this.CenterToScreen();
         }
 
-        private void Abone_EkleToolStripMenuItem_Click(object sender, EventArgs e)
+        private void ekleToolStripMenuItem_Click(object sender, EventArgs e)
         {
             mainPanel.Controls.Clear();
             aboneEkle abone = new aboneEkle();
@@ -50,8 +49,23 @@ namespace CAS
             Width = abone.Width + 40;
             Height = abone.Height + 83;
             abone.Show();
+            this.CenterToScreen();
         }
 
-
+        private void çıkışToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            mainPanel.Controls.Clear();
+            kullaniciGiris kg = new kullaniciGiris();
+            kg.Dock = DockStyle.None;
+            mainPanel.Width = kg.Width;
+            mainPanel.Height = kg.Height;
+            kg.TopLevel = false;
+            kg.FormBorderStyle = FormBorderStyle.None;
+            mainPanel.Controls.Add(kg);
+            Width = kg.Width + 40;
+            Height = kg.Height + 83;
+            kg.Show();
+            this.CenterToScreen();
+        }
     }
 }

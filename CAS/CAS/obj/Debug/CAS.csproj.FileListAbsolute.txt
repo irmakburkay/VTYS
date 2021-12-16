@@ -1,0 +1,12 @@
+C:\Users\Burkay\Documents\GitHub\VTYS\CAS\CAS\bin\Debug\CAS.exe.config
+C:\Users\Burkay\Documents\GitHub\VTYS\CAS\CAS\bin\Debug\CAS.exe
+C:\Users\Burkay\Documents\GitHub\VTYS\CAS\CAS\bin\Debug\CAS.pdb
+C:\Users\Burkay\Documents\GitHub\VTYS\CAS\CAS\obj\Debug\CAS.csproj.AssemblyReference.cache
+C:\Users\Burkay\Documents\GitHub\VTYS\CAS\CAS\obj\Debug\CAS.Properties.Resources.resources
+C:\Users\Burkay\Documents\GitHub\VTYS\CAS\CAS\obj\Debug\CAS.csproj.GenerateResource.cache
+C:\Users\Burkay\Documents\GitHub\VTYS\CAS\CAS\obj\Debug\CAS.csproj.CoreCompileInputs.cache
+C:\Users\Burkay\Documents\GitHub\VTYS\CAS\CAS\obj\Debug\CAS.exe
+C:\Users\Burkay\Documents\GitHub\VTYS\CAS\CAS\obj\Debug\CAS.pdb
+C:\Users\Burkay\Documents\GitHub\VTYS\CAS\CAS\obj\Debug\CAS.MainForm.resources
+C:\Users\Burkay\Documents\GitHub\VTYS\CAS\CAS\obj\Debug\CAS.kullaniciGiris.resources
+C:\Users\Burkay\Documents\GitHub\VTYS\CAS\CAS\obj\Debug\CAS.aboneEkle.resources

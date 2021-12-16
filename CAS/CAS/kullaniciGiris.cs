@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace CAS
 {
-    public partial class Form1 : Form
+    public partial class kullaniciGiris : Form
     {
-        public Form1()
+        public kullaniciGiris()
         {
             InitializeComponent();
+        }
+
+        private void girisButon_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

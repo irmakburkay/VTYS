@@ -11,7 +11,7 @@ namespace CAS
 
     class msSQL
     {
-        public SqlConnection connection = new SqlConnection("Data Source = localhost; Initial Catalog = JAS;");
+        public SqlConnection connection = new SqlConnection("Server=localhost; Database=JAS; Trusted_Connection=True;");
         public SqlCommand command = new SqlCommand();
         public SqlDataAdapter adapter;
 

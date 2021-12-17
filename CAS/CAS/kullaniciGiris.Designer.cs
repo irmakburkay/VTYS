@@ -39,7 +39,7 @@ namespace CAS
             // girisButon
             // 
             this.girisButon.Location = new System.Drawing.Point(153, 58);
-            this.girisButon.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.girisButon.Margin = new System.Windows.Forms.Padding(2);
             this.girisButon.Name = "girisButon";
             this.girisButon.Size = new System.Drawing.Size(56, 19);
             this.girisButon.TabIndex = 0;
@@ -50,7 +50,7 @@ namespace CAS
             // kullaniciText
             // 
             this.kullaniciText.Location = new System.Drawing.Point(77, 12);
-            this.kullaniciText.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.kullaniciText.Margin = new System.Windows.Forms.Padding(2);
             this.kullaniciText.Name = "kullaniciText";
             this.kullaniciText.Size = new System.Drawing.Size(133, 20);
             this.kullaniciText.TabIndex = 1;
@@ -68,7 +68,7 @@ namespace CAS
             // sifreText
             // 
             this.sifreText.Location = new System.Drawing.Point(77, 35);
-            this.sifreText.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.sifreText.Margin = new System.Windows.Forms.Padding(2);
             this.sifreText.Name = "sifreText";
             this.sifreText.Size = new System.Drawing.Size(133, 20);
             this.sifreText.TabIndex = 1;
@@ -88,16 +88,17 @@ namespace CAS
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(228, 93);
+            this.ClientSize = new System.Drawing.Size(228, 89);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.sifreText);
             this.Controls.Add(this.kullaniciText);
             this.Controls.Add(this.girisButon);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "kullaniciGiris";
             this.Text = "kullaniciGiris";
+            this.Load += new System.EventHandler(this.kullaniciGiris_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

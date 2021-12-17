@@ -18,53 +18,41 @@ namespace CAS
         {
             InitializeComponent();
         }
-        
-        public void MainForm_Load(object sender, EventArgs e)
+
+        public void baslangic()
         {
-            //navBar.Enabled = false;
-            mainPanel.Controls.Clear();
+            MainForm mf = Application.OpenForms["MainForm"] as MainForm;
+            mf.Opacity = 0;
+            mf.mainPanel.Controls.Clear();
+            mf.Width = 800;
+            mf.Height = 450;
             kullaniciGiris kg = new kullaniciGiris();
-            kg.Dock = DockStyle.None;
-            mainPanel.Width = kg.Width;
-            mainPanel.Height = kg.Height;
-            kg.TopLevel = false;
-            kg.FormBorderStyle = FormBorderStyle.None;
-            mainPanel.Controls.Add(kg);
-            Width = kg.Width + 40;
-            Height = kg.Height + 83;
+            kg.StartPosition = FormStartPosition.CenterScreen;
             kg.Show();
             this.CenterToScreen();
+        }
+        fonksiyon fk = new fonksiyon();
+        public void MainForm_Load(object sender, EventArgs e)
+        {
+            baslangic();
         }
 
         private void ekleToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            mainPanel.Controls.Clear();
             aboneEkle abone = new aboneEkle();
-            abone.Dock = DockStyle.None;
-            mainPanel.Width = abone.Width;
-            mainPanel.Height = abone.Height;
-            abone.TopLevel = false;
-            abone.FormBorderStyle = FormBorderStyle.None;
-            mainPanel.Controls.Add(abone);
-            Width = abone.Width + 40;
-            Height = abone.Height + 83;
-            abone.Show();
+            fk.nav(abone);
             this.CenterToScreen();
         }
 
         private void çıkışToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            mainPanel.Controls.Clear();
-            kullaniciGiris kg = new kullaniciGiris();
-            kg.Dock = DockStyle.None;
-            mainPanel.Width = kg.Width;
-            mainPanel.Height = kg.Height;
-            kg.TopLevel = false;
-            kg.FormBorderStyle = FormBorderStyle.None;
-            mainPanel.Controls.Add(kg);
-            Width = kg.Width + 40;
-            Height = kg.Height + 83;
-            kg.Show();
+            baslangic();
+        }
+
+        private void ekleToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            abonelikEkle abnlk = new abonelikEkle();
+            fk.nav(abnlk);
             this.CenterToScreen();
         }
     }

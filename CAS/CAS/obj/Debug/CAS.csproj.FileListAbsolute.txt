@@ -23,3 +23,4 @@ C:\Users\musta\Source\Repos\irmakburkay\VTYS\CAS\CAS\obj\Debug\CAS.csproj.Genera
 C:\Users\musta\Source\Repos\irmakburkay\VTYS\CAS\CAS\obj\Debug\CAS.csproj.CoreCompileInputs.cache
 C:\Users\musta\Source\Repos\irmakburkay\VTYS\CAS\CAS\obj\Debug\CAS.exe
 C:\Users\musta\Source\Repos\irmakburkay\VTYS\CAS\CAS\obj\Debug\CAS.pdb
+C:\Users\musta\Source\Repos\irmakburkay\VTYS\CAS\CAS\obj\Debug\CAS.abonelikEkle.resources

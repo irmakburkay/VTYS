@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace CAS
 {
-    public partial class aboneEkle : formlar
+    public partial class formlar : Form
     {
-        public aboneEkle()
+        public formlar()
         {
             InitializeComponent();
-        }
-
-        private void aboneKytButon_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

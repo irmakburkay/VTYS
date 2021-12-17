@@ -174,7 +174,7 @@ namespace CAS
             // 
             this.textBox7.Location = new System.Drawing.Point(570, 52);
             this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(206, 20);
+            this.textBox7.Size = new System.Drawing.Size(198, 20);
             this.textBox7.TabIndex = 1;
             // 
             // aboneKytButon
@@ -185,6 +185,7 @@ namespace CAS
             this.aboneKytButon.TabIndex = 3;
             this.aboneKytButon.Text = "Kaydet";
             this.aboneKytButon.UseVisualStyleBackColor = true;
+            this.aboneKytButon.Click += new System.EventHandler(this.aboneKytButon_Click);
             // 
             // aboneEkle
             // 

@@ -52,7 +52,19 @@
     <Compile Include="aboneEkle.Designer.cs">
       <DependentUpon>aboneEkle.cs</DependentUpon>
     </Compile>
+    <Compile Include="abonelikEkle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="abonelikEkle.Designer.cs">
+      <DependentUpon>abonelikEkle.cs</DependentUpon>
+    </Compile>
     <Compile Include="fonksiyon.cs" />
+    <Compile Include="formlar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formlar.Designer.cs">
+      <DependentUpon>formlar.cs</DependentUpon>
+    </Compile>
     <Compile Include="kullaniciGiris.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -70,6 +82,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="aboneEkle.resx">
       <DependentUpon>aboneEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="abonelikEkle.resx">
+      <DependentUpon>abonelikEkle.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="kullaniciGiris.resx">
       <DependentUpon>kullaniciGiris.cs</DependentUpon>

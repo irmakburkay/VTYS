@@ -9,19 +9,19 @@ namespace CAS
 {
     internal class fonksiyon
     {
-        public void nav()
+        public void nav(formlar f)
         {
-            aboneEkle abone = new aboneEkle();
-            MainForm main=new MainForm();
-            abone.Dock = DockStyle.None;
-            main.mainPanel.Width = abone.Width;
-            main.mainPanel.Height = abone.Height;
-            abone.TopLevel = false;
-            abone.FormBorderStyle = FormBorderStyle.None;
-            main.mainPanel.Controls.Add(abone);
-            main.Width = abone.Width + 40;
-            main.Height = abone.Height + 83;
-            abone.Show();
+            MainForm main = Application.OpenForms["MainForm"] as MainForm;
+            main.mainPanel.Controls.Clear();
+            f.Dock = DockStyle.None;
+            f.TopLevel = false;
+            f.FormBorderStyle = FormBorderStyle.None;
+            main.mainPanel.Width = f.Width;
+            main.mainPanel.Height = f.Height;
+            main.mainPanel.Controls.Add(f);
+            main.Width = f.Width + 40;
+            main.Height = f.Height + 83;
+            f.Show();
         }
 
     }

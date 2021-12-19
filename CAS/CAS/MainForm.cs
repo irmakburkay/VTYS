@@ -55,5 +55,40 @@ namespace CAS
             fk.nav(abnlk);
             this.CenterToScreen();
         }
+
+        private void ekleToolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            dergiGazeteEkle dergi = new dergiGazeteEkle();
+            fk.nav(dergi);
+            this.CenterToScreen();
+        }
+
+        private void ekleToolStripMenuItem3_Click(object sender, EventArgs e)
+        {
+            turEkle tur = new turEkle();
+            fk.nav(tur);
+            this.CenterToScreen();
+        }
+
+        private void ekleToolStripMenuItem4_Click(object sender, EventArgs e)
+        {
+            fiyatTipiEkle fiyat = new fiyatTipiEkle();
+            fk.nav(fiyat);
+            this.CenterToScreen();
+        }
+
+        private void ekleToolStripMenuItem5_Click(object sender, EventArgs e)
+        {
+            personelEkle prsnl = new personelEkle();
+            fk.nav(prsnl);
+            this.CenterToScreen();
+        }
+
+        private void ekleToolStripMenuItem6_Click(object sender, EventArgs e)
+        {
+            bolumEkle blm = new bolumEkle();
+            fk.nav(blm);
+            this.CenterToScreen();
+        }
     }
 }

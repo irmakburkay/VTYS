@@ -38,18 +38,18 @@ namespace CAS
             this.raporlaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.içeriklerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dergiGazeteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ekleToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.türToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ekleToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
             this.fiyatToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ekleToolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
             this.yetkiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.personelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ekleToolStripMenuItem5 = new System.Windows.Forms.ToolStripMenuItem();
             this.bölümToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ekleToolStripMenuItem6 = new System.Windows.Forms.ToolStripMenuItem();
             this.çıkışToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mainPanel = new System.Windows.Forms.Panel();
-            this.ekleToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
-            this.ekleToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
-            this.ekleToolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
-            this.ekleToolStripMenuItem5 = new System.Windows.Forms.ToolStripMenuItem();
-            this.ekleToolStripMenuItem6 = new System.Windows.Forms.ToolStripMenuItem();
             this.navBar.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -132,6 +132,13 @@ namespace CAS
             this.dergiGazeteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.dergiGazeteToolStripMenuItem.Text = "Dergi/Gazete";
             // 
+            // ekleToolStripMenuItem2
+            // 
+            this.ekleToolStripMenuItem2.Name = "ekleToolStripMenuItem2";
+            this.ekleToolStripMenuItem2.Size = new System.Drawing.Size(180, 22);
+            this.ekleToolStripMenuItem2.Text = "Ekle";
+            this.ekleToolStripMenuItem2.Click += new System.EventHandler(this.ekleToolStripMenuItem2_Click);
+            // 
             // türToolStripMenuItem
             // 
             this.türToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -140,6 +147,13 @@ namespace CAS
             this.türToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.türToolStripMenuItem.Text = "Tür";
             // 
+            // ekleToolStripMenuItem3
+            // 
+            this.ekleToolStripMenuItem3.Name = "ekleToolStripMenuItem3";
+            this.ekleToolStripMenuItem3.Size = new System.Drawing.Size(180, 22);
+            this.ekleToolStripMenuItem3.Text = "Ekle";
+            this.ekleToolStripMenuItem3.Click += new System.EventHandler(this.ekleToolStripMenuItem3_Click);
+            // 
             // fiyatToolStripMenuItem
             // 
             this.fiyatToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -147,6 +161,13 @@ namespace CAS
             this.fiyatToolStripMenuItem.Name = "fiyatToolStripMenuItem";
             this.fiyatToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.fiyatToolStripMenuItem.Text = "Fiyat";
+            // 
+            // ekleToolStripMenuItem4
+            // 
+            this.ekleToolStripMenuItem4.Name = "ekleToolStripMenuItem4";
+            this.ekleToolStripMenuItem4.Size = new System.Drawing.Size(180, 22);
+            this.ekleToolStripMenuItem4.Text = "Ekle";
+            this.ekleToolStripMenuItem4.Click += new System.EventHandler(this.ekleToolStripMenuItem4_Click);
             // 
             // yetkiToolStripMenuItem
             // 
@@ -165,6 +186,13 @@ namespace CAS
             this.personelToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.personelToolStripMenuItem.Text = "Personel";
             // 
+            // ekleToolStripMenuItem5
+            // 
+            this.ekleToolStripMenuItem5.Name = "ekleToolStripMenuItem5";
+            this.ekleToolStripMenuItem5.Size = new System.Drawing.Size(180, 22);
+            this.ekleToolStripMenuItem5.Text = "Ekle";
+            this.ekleToolStripMenuItem5.Click += new System.EventHandler(this.ekleToolStripMenuItem5_Click);
+            // 
             // bölümToolStripMenuItem
             // 
             this.bölümToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -172,6 +200,13 @@ namespace CAS
             this.bölümToolStripMenuItem.Name = "bölümToolStripMenuItem";
             this.bölümToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.bölümToolStripMenuItem.Text = "Bölüm";
+            // 
+            // ekleToolStripMenuItem6
+            // 
+            this.ekleToolStripMenuItem6.Name = "ekleToolStripMenuItem6";
+            this.ekleToolStripMenuItem6.Size = new System.Drawing.Size(180, 22);
+            this.ekleToolStripMenuItem6.Text = "Ekle";
+            this.ekleToolStripMenuItem6.Click += new System.EventHandler(this.ekleToolStripMenuItem6_Click);
             // 
             // çıkışToolStripMenuItem
             // 
@@ -187,36 +222,6 @@ namespace CAS
             this.mainPanel.Name = "mainPanel";
             this.mainPanel.Size = new System.Drawing.Size(582, 330);
             this.mainPanel.TabIndex = 1;
-            // 
-            // ekleToolStripMenuItem2
-            // 
-            this.ekleToolStripMenuItem2.Name = "ekleToolStripMenuItem2";
-            this.ekleToolStripMenuItem2.Size = new System.Drawing.Size(180, 22);
-            this.ekleToolStripMenuItem2.Text = "Ekle";
-            // 
-            // ekleToolStripMenuItem3
-            // 
-            this.ekleToolStripMenuItem3.Name = "ekleToolStripMenuItem3";
-            this.ekleToolStripMenuItem3.Size = new System.Drawing.Size(180, 22);
-            this.ekleToolStripMenuItem3.Text = "Ekle";
-            // 
-            // ekleToolStripMenuItem4
-            // 
-            this.ekleToolStripMenuItem4.Name = "ekleToolStripMenuItem4";
-            this.ekleToolStripMenuItem4.Size = new System.Drawing.Size(180, 22);
-            this.ekleToolStripMenuItem4.Text = "Ekle";
-            // 
-            // ekleToolStripMenuItem5
-            // 
-            this.ekleToolStripMenuItem5.Name = "ekleToolStripMenuItem5";
-            this.ekleToolStripMenuItem5.Size = new System.Drawing.Size(180, 22);
-            this.ekleToolStripMenuItem5.Text = "Ekle";
-            // 
-            // ekleToolStripMenuItem6
-            // 
-            this.ekleToolStripMenuItem6.Name = "ekleToolStripMenuItem6";
-            this.ekleToolStripMenuItem6.Size = new System.Drawing.Size(180, 22);
-            this.ekleToolStripMenuItem6.Text = "Ekle";
             // 
             // MainForm
             // 

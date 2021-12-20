@@ -1,7 +1,6 @@
-﻿
-namespace CAS
+﻿namespace CAS
 {
-    partial class aboneEkle
+    partial class formlar
     {
         /// <summary>
         /// Required designer variable.
@@ -29,18 +28,10 @@ namespace CAS
         /// </summary>
         private void InitializeComponent()
         {
-            this.SuspendLayout();
-            // 
-            // aboneEkle
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.components = new System.ComponentModel.Container();
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.DarkRed;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Name = "aboneEkle";
-            this.Text = "aboneEkle";
-            this.ResumeLayout(false);
-
+            this.Text = "formlar";
         }
 
         #endregion

@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace CAS
 {
-    public partial class kullaniciGiris : Form
+    public partial class kullaniciGiris : formlar
     {
         public kullaniciGiris()
         {
@@ -19,7 +19,15 @@ namespace CAS
 
         private void girisButon_Click(object sender, EventArgs e)
         {
+            MainForm mf = Application.OpenForms["MainForm"] as MainForm;
+            mf.Show();
+            mf.Opacity = 100;
+            mf.navBar.Enabled = true;  
+            this.Close();
+        }
 
+        private void kullaniciGiris_Load(object sender, EventArgs e)
+        {
         }
     }
 }

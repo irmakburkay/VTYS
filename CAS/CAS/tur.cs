@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace CAS
 {
-    public partial class aboneEkle : Form
+    public partial class tur : formlar
     {
-        public aboneEkle()
+        public tur()
         {
             InitializeComponent();
+        }
+
+        private void turEkle_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

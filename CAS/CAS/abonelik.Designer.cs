@@ -1,6 +1,6 @@
 ﻿namespace CAS
 {
-    partial class abonelikEkle
+    partial class abonelik
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.kaydetButon = new System.Windows.Forms.Button();
             this.baslangıcDate = new System.Windows.Forms.DateTimePicker();
             this.label6 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -37,16 +36,15 @@
             this.icerikAdıCombo = new System.Windows.Forms.ComboBox();
             this.aboneLbl = new System.Windows.Forms.Label();
             this.icerikLbl = new System.Windows.Forms.Label();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.guncelleRadio = new System.Windows.Forms.RadioButton();
+            this.silRadio = new System.Windows.Forms.RadioButton();
+            this.ekleRadio = new System.Windows.Forms.RadioButton();
+            this.aboneKytButon = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // kaydetButon
-            // 
-            this.kaydetButon.Location = new System.Drawing.Point(354, 66);
-            this.kaydetButon.Name = "kaydetButon";
-            this.kaydetButon.Size = new System.Drawing.Size(108, 32);
-            this.kaydetButon.TabIndex = 20;
-            this.kaydetButon.Text = "Kaydet";
-            this.kaydetButon.UseVisualStyleBackColor = true;
             // 
             // baslangıcDate
             // 
@@ -114,14 +112,83 @@
             this.icerikLbl.TabIndex = 11;
             this.icerikLbl.Text = "İçerik Adı";
             // 
-            // abonelikEkle
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCellsExceptHeaders;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(12, 156);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.RowHeadersVisible = false;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView1.Size = new System.Drawing.Size(464, 180);
+            this.dataGridView1.TabIndex = 26;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.guncelleRadio);
+            this.groupBox1.Controls.Add(this.silRadio);
+            this.groupBox1.Controls.Add(this.ekleRadio);
+            this.groupBox1.Controls.Add(this.aboneKytButon);
+            this.groupBox1.Location = new System.Drawing.Point(280, 66);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(182, 84);
+            this.groupBox1.TabIndex = 27;
+            this.groupBox1.TabStop = false;
+            // 
+            // guncelleRadio
+            // 
+            this.guncelleRadio.AutoSize = true;
+            this.guncelleRadio.Location = new System.Drawing.Point(102, 57);
+            this.guncelleRadio.Name = "guncelleRadio";
+            this.guncelleRadio.Size = new System.Drawing.Size(67, 17);
+            this.guncelleRadio.TabIndex = 22;
+            this.guncelleRadio.TabStop = true;
+            this.guncelleRadio.Text = "Güncelle";
+            this.guncelleRadio.UseVisualStyleBackColor = true;
+            // 
+            // silRadio
+            // 
+            this.silRadio.AutoSize = true;
+            this.silRadio.Location = new System.Drawing.Point(102, 34);
+            this.silRadio.Name = "silRadio";
+            this.silRadio.Size = new System.Drawing.Size(36, 17);
+            this.silRadio.TabIndex = 23;
+            this.silRadio.TabStop = true;
+            this.silRadio.Text = "Sil";
+            this.silRadio.UseVisualStyleBackColor = true;
+            // 
+            // ekleRadio
+            // 
+            this.ekleRadio.AutoSize = true;
+            this.ekleRadio.Location = new System.Drawing.Point(102, 11);
+            this.ekleRadio.Name = "ekleRadio";
+            this.ekleRadio.Size = new System.Drawing.Size(46, 17);
+            this.ekleRadio.TabIndex = 24;
+            this.ekleRadio.TabStop = true;
+            this.ekleRadio.Text = "Ekle";
+            this.ekleRadio.UseVisualStyleBackColor = true;
+            // 
+            // aboneKytButon
+            // 
+            this.aboneKytButon.Location = new System.Drawing.Point(6, 11);
+            this.aboneKytButon.Name = "aboneKytButon";
+            this.aboneKytButon.Size = new System.Drawing.Size(90, 32);
+            this.aboneKytButon.TabIndex = 3;
+            this.aboneKytButon.Text = "Kaydet";
+            this.aboneKytButon.UseVisualStyleBackColor = true;
+            // 
+            // abonelik
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(488, 104);
+            this.ClientSize = new System.Drawing.Size(488, 348);
+            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.icerikAdıCombo);
             this.Controls.Add(this.aboneAdıCombo);
-            this.Controls.Add(this.kaydetButon);
             this.Controls.Add(this.bitisDate);
             this.Controls.Add(this.icerikLbl);
             this.Controls.Add(this.label1);
@@ -129,18 +196,19 @@
             this.Controls.Add(this.baslangıcDate);
             this.Controls.Add(this.label6);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "abonelikEkle";
+            this.Name = "abonelik";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "abonelikEkle";
             this.Load += new System.EventHandler(this.abonelikEkle_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Button kaydetButon;
         private System.Windows.Forms.DateTimePicker baslangıcDate;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label1;
@@ -149,5 +217,11 @@
         private System.Windows.Forms.ComboBox icerikAdıCombo;
         private System.Windows.Forms.Label aboneLbl;
         private System.Windows.Forms.Label icerikLbl;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.RadioButton guncelleRadio;
+        private System.Windows.Forms.RadioButton silRadio;
+        private System.Windows.Forms.RadioButton ekleRadio;
+        private System.Windows.Forms.Button aboneKytButon;
     }
 }

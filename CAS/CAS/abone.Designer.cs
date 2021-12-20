@@ -1,7 +1,7 @@
 ﻿
 namespace CAS
 {
-    partial class aboneEkle
+    partial class abone
     {
         /// <summary>
         /// Required designer variable.
@@ -46,6 +46,13 @@ namespace CAS
             this.label7 = new System.Windows.Forms.Label();
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.aboneKytButon = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.guncelleRadio = new System.Windows.Forms.RadioButton();
+            this.silRadio = new System.Windows.Forms.RadioButton();
+            this.ekleRadio = new System.Windows.Forms.RadioButton();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -179,21 +186,81 @@ namespace CAS
             // 
             // aboneKytButon
             // 
-            this.aboneKytButon.Location = new System.Drawing.Point(668, 107);
+            this.aboneKytButon.Location = new System.Drawing.Point(6, 11);
             this.aboneKytButon.Name = "aboneKytButon";
-            this.aboneKytButon.Size = new System.Drawing.Size(108, 32);
+            this.aboneKytButon.Size = new System.Drawing.Size(108, 40);
             this.aboneKytButon.TabIndex = 3;
             this.aboneKytButon.Text = "Kaydet";
             this.aboneKytButon.UseVisualStyleBackColor = true;
             this.aboneKytButon.Click += new System.EventHandler(this.aboneKytButon_Click);
             // 
-            // aboneEkle
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCellsExceptHeaders;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(12, 166);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.RowHeadersVisible = false;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView1.Size = new System.Drawing.Size(756, 214);
+            this.dataGridView1.TabIndex = 25;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.guncelleRadio);
+            this.groupBox1.Controls.Add(this.silRadio);
+            this.groupBox1.Controls.Add(this.ekleRadio);
+            this.groupBox1.Controls.Add(this.aboneKytButon);
+            this.groupBox1.Location = new System.Drawing.Point(568, 78);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(200, 82);
+            this.groupBox1.TabIndex = 26;
+            this.groupBox1.TabStop = false;
+            // 
+            // guncelleRadio
+            // 
+            this.guncelleRadio.AutoSize = true;
+            this.guncelleRadio.Location = new System.Drawing.Point(122, 57);
+            this.guncelleRadio.Name = "guncelleRadio";
+            this.guncelleRadio.Size = new System.Drawing.Size(67, 17);
+            this.guncelleRadio.TabIndex = 22;
+            this.guncelleRadio.TabStop = true;
+            this.guncelleRadio.Text = "Güncelle";
+            this.guncelleRadio.UseVisualStyleBackColor = true;
+            // 
+            // silRadio
+            // 
+            this.silRadio.AutoSize = true;
+            this.silRadio.Location = new System.Drawing.Point(122, 34);
+            this.silRadio.Name = "silRadio";
+            this.silRadio.Size = new System.Drawing.Size(36, 17);
+            this.silRadio.TabIndex = 23;
+            this.silRadio.TabStop = true;
+            this.silRadio.Text = "Sil";
+            this.silRadio.UseVisualStyleBackColor = true;
+            // 
+            // ekleRadio
+            // 
+            this.ekleRadio.AutoSize = true;
+            this.ekleRadio.Location = new System.Drawing.Point(122, 11);
+            this.ekleRadio.Name = "ekleRadio";
+            this.ekleRadio.Size = new System.Drawing.Size(46, 17);
+            this.ekleRadio.TabIndex = 24;
+            this.ekleRadio.TabStop = true;
+            this.ekleRadio.Text = "Ekle";
+            this.ekleRadio.UseVisualStyleBackColor = true;
+            // 
+            // abone
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(780, 150);
-            this.Controls.Add(this.aboneKytButon);
+            this.ClientSize = new System.Drawing.Size(780, 392);
+            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.textBox7);
             this.Controls.Add(this.textBox5);
@@ -212,9 +279,12 @@ namespace CAS
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(2);
-            this.Name = "aboneEkle";
+            this.Name = "abone";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "aboneEkle";
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -239,5 +309,10 @@ namespace CAS
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.Button aboneKytButon;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.RadioButton guncelleRadio;
+        private System.Windows.Forms.RadioButton silRadio;
+        private System.Windows.Forms.RadioButton ekleRadio;
     }
 }

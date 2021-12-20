@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace CAS
 {
-    public partial class bolumEkle : formlar
+    public partial class bolum : formlar
     {
-        public bolumEkle()
+        public bolum()
         {
             InitializeComponent();
         }

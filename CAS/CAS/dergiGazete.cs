@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace CAS
 {
-    public partial class dergiGazeteEkle : formlar
+    public partial class dergiGazete : formlar
     {
-        public dergiGazeteEkle()
+        public dergiGazete()
         {
             InitializeComponent();
         }

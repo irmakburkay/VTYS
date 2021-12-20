@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace CAS
 {
-    public partial class aboneEkle : formlar
+    public partial class abone : formlar
     {
-        public aboneEkle()
+        public abone()
         {
             InitializeComponent();
         }

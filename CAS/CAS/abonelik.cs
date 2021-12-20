@@ -10,14 +10,14 @@ using System.Windows.Forms;
 
 namespace CAS
 {
-    public partial class personelEkle : formlar
+    public partial class abonelik : formlar
     {
-        public personelEkle()
+        public abonelik()
         {
             InitializeComponent();
         }
 
-        private void personelEkle_Load(object sender, EventArgs e)
+        private void abonelikEkle_Load(object sender, EventArgs e)
         {
 
         }

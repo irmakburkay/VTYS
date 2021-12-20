@@ -39,7 +39,7 @@ namespace CAS
 
         private void ekleToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            aboneEkle abone = new aboneEkle();
+            abone abone = new abone();
             fk.nav(abone);
             this.CenterToScreen();
         }
@@ -51,42 +51,42 @@ namespace CAS
 
         private void ekleToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            abonelikEkle abnlk = new abonelikEkle();
+            abonelik abnlk = new abonelik();
             fk.nav(abnlk);
             this.CenterToScreen();
         }
 
         private void ekleToolStripMenuItem2_Click(object sender, EventArgs e)
         {
-            dergiGazeteEkle dergi = new dergiGazeteEkle();
+            dergiGazete dergi = new dergiGazete();
             fk.nav(dergi);
             this.CenterToScreen();
         }
 
         private void ekleToolStripMenuItem3_Click(object sender, EventArgs e)
         {
-            turEkle tur = new turEkle();
+            tur tur = new tur();
             fk.nav(tur);
             this.CenterToScreen();
         }
 
         private void ekleToolStripMenuItem4_Click(object sender, EventArgs e)
         {
-            fiyatTipiEkle fiyat = new fiyatTipiEkle();
+            fiyatTipi fiyat = new fiyatTipi();
             fk.nav(fiyat);
             this.CenterToScreen();
         }
 
         private void ekleToolStripMenuItem5_Click(object sender, EventArgs e)
         {
-            personelEkle prsnl = new personelEkle();
+            personel prsnl = new personel();
             fk.nav(prsnl);
             this.CenterToScreen();
         }
 
         private void ekleToolStripMenuItem6_Click(object sender, EventArgs e)
         {
-            bolumEkle blm = new bolumEkle();
+            bolum blm = new bolum();
             fk.nav(blm);
             this.CenterToScreen();
         }

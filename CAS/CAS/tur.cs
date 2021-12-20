@@ -10,14 +10,14 @@ using System.Windows.Forms;
 
 namespace CAS
 {
-    public partial class fiyatTipiEkle : formlar
+    public partial class tur : formlar
     {
-        public fiyatTipiEkle()
+        public tur()
         {
             InitializeComponent();
         }
 
-        private void fiyatTipiEkle_Load(object sender, EventArgs e)
+        private void turEkle_Load(object sender, EventArgs e)
         {
 
         }

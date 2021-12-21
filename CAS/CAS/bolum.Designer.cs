@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.tipAdıTxt = new System.Windows.Forms.TextBox();
+            this.bolumAdıTxt = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.guncelleRadio = new System.Windows.Forms.RadioButton();
@@ -40,19 +40,21 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
-            // tipAdıTxt
+            // bolumAdıTxt
             // 
-            this.tipAdıTxt.Location = new System.Drawing.Point(72, 17);
-            this.tipAdıTxt.Name = "tipAdıTxt";
-            this.tipAdıTxt.Size = new System.Drawing.Size(100, 20);
-            this.tipAdıTxt.TabIndex = 6;
+            this.bolumAdıTxt.Location = new System.Drawing.Point(96, 21);
+            this.bolumAdıTxt.Margin = new System.Windows.Forms.Padding(4);
+            this.bolumAdıTxt.Name = "bolumAdıTxt";
+            this.bolumAdıTxt.Size = new System.Drawing.Size(132, 22);
+            this.bolumAdıTxt.TabIndex = 6;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 20);
+            this.label1.Location = new System.Drawing.Point(16, 25);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(54, 13);
+            this.label1.Size = new System.Drawing.Size(71, 17);
             this.label1.TabIndex = 4;
             this.label1.Text = "Bölüm Adı";
             // 
@@ -62,18 +64,21 @@
             this.groupBox1.Controls.Add(this.silRadio);
             this.groupBox1.Controls.Add(this.ekleRadio);
             this.groupBox1.Controls.Add(this.turKaydetBtn);
-            this.groupBox1.Location = new System.Drawing.Point(178, 12);
+            this.groupBox1.Location = new System.Drawing.Point(237, 15);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(151, 88);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBox1.Size = new System.Drawing.Size(201, 108);
             this.groupBox1.TabIndex = 27;
             this.groupBox1.TabStop = false;
             // 
             // guncelleRadio
             // 
             this.guncelleRadio.AutoSize = true;
-            this.guncelleRadio.Location = new System.Drawing.Point(73, 61);
+            this.guncelleRadio.Location = new System.Drawing.Point(97, 75);
+            this.guncelleRadio.Margin = new System.Windows.Forms.Padding(4);
             this.guncelleRadio.Name = "guncelleRadio";
-            this.guncelleRadio.Size = new System.Drawing.Size(67, 17);
+            this.guncelleRadio.Size = new System.Drawing.Size(85, 21);
             this.guncelleRadio.TabIndex = 22;
             this.guncelleRadio.TabStop = true;
             this.guncelleRadio.Text = "Güncelle";
@@ -82,9 +87,10 @@
             // silRadio
             // 
             this.silRadio.AutoSize = true;
-            this.silRadio.Location = new System.Drawing.Point(73, 38);
+            this.silRadio.Location = new System.Drawing.Point(97, 47);
+            this.silRadio.Margin = new System.Windows.Forms.Padding(4);
             this.silRadio.Name = "silRadio";
-            this.silRadio.Size = new System.Drawing.Size(36, 17);
+            this.silRadio.Size = new System.Drawing.Size(44, 21);
             this.silRadio.TabIndex = 23;
             this.silRadio.TabStop = true;
             this.silRadio.Text = "Sil";
@@ -93,9 +99,10 @@
             // ekleRadio
             // 
             this.ekleRadio.AutoSize = true;
-            this.ekleRadio.Location = new System.Drawing.Point(73, 15);
+            this.ekleRadio.Location = new System.Drawing.Point(97, 18);
+            this.ekleRadio.Margin = new System.Windows.Forms.Padding(4);
             this.ekleRadio.Name = "ekleRadio";
-            this.ekleRadio.Size = new System.Drawing.Size(46, 17);
+            this.ekleRadio.Size = new System.Drawing.Size(56, 21);
             this.ekleRadio.TabIndex = 24;
             this.ekleRadio.TabStop = true;
             this.ekleRadio.Text = "Ekle";
@@ -103,12 +110,14 @@
             // 
             // turKaydetBtn
             // 
-            this.turKaydetBtn.Location = new System.Drawing.Point(6, 10);
+            this.turKaydetBtn.Location = new System.Drawing.Point(8, 12);
+            this.turKaydetBtn.Margin = new System.Windows.Forms.Padding(4);
             this.turKaydetBtn.Name = "turKaydetBtn";
-            this.turKaydetBtn.Size = new System.Drawing.Size(61, 27);
+            this.turKaydetBtn.Size = new System.Drawing.Size(81, 33);
             this.turKaydetBtn.TabIndex = 8;
             this.turKaydetBtn.Text = "Kaydet";
             this.turKaydetBtn.UseVisualStyleBackColor = true;
+            this.turKaydetBtn.Click += new System.EventHandler(this.turKaydetBtn_Click);
             // 
             // dataGridView1
             // 
@@ -116,24 +125,28 @@
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCellsExceptHeaders;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(15, 106);
+            this.dataGridView1.Location = new System.Drawing.Point(20, 130);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersVisible = false;
+            this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(314, 162);
+            this.dataGridView1.Size = new System.Drawing.Size(419, 199);
             this.dataGridView1.TabIndex = 28;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // bolum
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(341, 279);
+            this.ClientSize = new System.Drawing.Size(455, 343);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.tipAdıTxt);
+            this.Controls.Add(this.bolumAdıTxt);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "bolum";
             this.Text = "bolumEkle";
             this.Load += new System.EventHandler(this.bolumEkle_Load);
@@ -146,7 +159,7 @@
         }
 
         #endregion
-        private System.Windows.Forms.TextBox tipAdıTxt;
+        private System.Windows.Forms.TextBox bolumAdıTxt;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.RadioButton guncelleRadio;

@@ -11,9 +11,8 @@ using System.Windows.Forms;
 namespace CAS
 {
     public partial class MainForm : Form
-    {
+    { 
 
-        
         public MainForm()
         {
             InitializeComponent();
@@ -32,6 +31,7 @@ namespace CAS
             this.CenterToScreen();
         }
         fonksiyon fk = new fonksiyon();
+
         public void MainForm_Load(object sender, EventArgs e)
         {
             baslangic();

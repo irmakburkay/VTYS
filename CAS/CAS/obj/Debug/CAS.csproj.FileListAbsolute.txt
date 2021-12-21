@@ -9,7 +9,6 @@ C:\Users\Burkay\Documents\GitHub\VTYS\CAS\CAS\obj\Debug\CAS.exe
 C:\Users\Burkay\Documents\GitHub\VTYS\CAS\CAS\obj\Debug\CAS.pdb
 C:\Users\Burkay\Documents\GitHub\VTYS\CAS\CAS\obj\Debug\CAS.MainForm.resources
 C:\Users\Burkay\Documents\GitHub\VTYS\CAS\CAS\obj\Debug\CAS.kullaniciGiris.resources
-C:\Users\Burkay\Documents\GitHub\VTYS\CAS\CAS\obj\Debug\CAS.aboneEkle.resources
 C:\Users\musta\Source\Repos\irmakburkay\VTYS\CAS\CAS\bin\Debug\CAS.exe.config
 C:\Users\musta\Source\Repos\irmakburkay\VTYS\CAS\CAS\bin\Debug\CAS.exe
 C:\Users\musta\Source\Repos\irmakburkay\VTYS\CAS\CAS\bin\Debug\CAS.pdb
@@ -29,3 +28,10 @@ C:\Users\musta\Source\Repos\irmakburkay\VTYS\CAS\CAS\obj\Debug\CAS.dergiGazete.r
 C:\Users\musta\Source\Repos\irmakburkay\VTYS\CAS\CAS\obj\Debug\CAS.fiyatTipi.resources
 C:\Users\musta\Source\Repos\irmakburkay\VTYS\CAS\CAS\obj\Debug\CAS.personel.resources
 C:\Users\musta\Source\Repos\irmakburkay\VTYS\CAS\CAS\obj\Debug\CAS.tur.resources
+C:\Users\Burkay\Documents\GitHub\VTYS\CAS\CAS\obj\Debug\CAS.abone.resources
+C:\Users\Burkay\Documents\GitHub\VTYS\CAS\CAS\obj\Debug\CAS.abonelik.resources
+C:\Users\Burkay\Documents\GitHub\VTYS\CAS\CAS\obj\Debug\CAS.bolum.resources
+C:\Users\Burkay\Documents\GitHub\VTYS\CAS\CAS\obj\Debug\CAS.dergiGazete.resources
+C:\Users\Burkay\Documents\GitHub\VTYS\CAS\CAS\obj\Debug\CAS.fiyatTipi.resources
+C:\Users\Burkay\Documents\GitHub\VTYS\CAS\CAS\obj\Debug\CAS.personel.resources
+C:\Users\Burkay\Documents\GitHub\VTYS\CAS\CAS\obj\Debug\CAS.tur.resources

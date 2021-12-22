@@ -29,22 +29,22 @@
         private void InitializeComponent()
         {
             this.aboneKytButon = new System.Windows.Forms.Button();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.personelMailTxt = new System.Windows.Forms.TextBox();
+            this.sifreTxt = new System.Windows.Forms.TextBox();
+            this.kullaiciAdıTxt = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.personelTelefonTxt = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.personelSoyadTxt = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.soyadTxt = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.personelAdresTxt = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.personelAdıTxt = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.bolumCombo = new System.Windows.Forms.ComboBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.guncelleRadio = new System.Windows.Forms.RadioButton();
             this.silRadio = new System.Windows.Forms.RadioButton();
@@ -62,27 +62,28 @@
             this.aboneKytButon.TabIndex = 20;
             this.aboneKytButon.Text = "Kaydet";
             this.aboneKytButon.UseVisualStyleBackColor = true;
+            this.aboneKytButon.Click += new System.EventHandler(this.personelKytButon_Click);
             // 
-            // textBox7
+            // personelMailTxt
             // 
-            this.textBox7.Location = new System.Drawing.Point(349, 37);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(213, 20);
-            this.textBox7.TabIndex = 17;
+            this.personelMailTxt.Location = new System.Drawing.Point(349, 37);
+            this.personelMailTxt.Name = "personelMailTxt";
+            this.personelMailTxt.Size = new System.Drawing.Size(213, 20);
+            this.personelMailTxt.TabIndex = 17;
             // 
-            // textBox5
+            // sifreTxt
             // 
-            this.textBox5.Location = new System.Drawing.Point(663, 11);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(100, 20);
-            this.textBox5.TabIndex = 16;
+            this.sifreTxt.Location = new System.Drawing.Point(663, 11);
+            this.sifreTxt.Name = "sifreTxt";
+            this.sifreTxt.Size = new System.Drawing.Size(100, 20);
+            this.sifreTxt.TabIndex = 16;
             // 
-            // textBox4
+            // kullaiciAdıTxt
             // 
-            this.textBox4.Location = new System.Drawing.Point(525, 11);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 20);
-            this.textBox4.TabIndex = 15;
+            this.kullaiciAdıTxt.Location = new System.Drawing.Point(525, 11);
+            this.kullaiciAdıTxt.Name = "kullaiciAdıTxt";
+            this.kullaiciAdıTxt.Size = new System.Drawing.Size(100, 20);
+            this.kullaiciAdıTxt.TabIndex = 15;
             // 
             // label7
             // 
@@ -93,12 +94,13 @@
             this.label7.TabIndex = 8;
             this.label7.Text = "E-Mail";
             // 
-            // textBox3
+            // personelTelefonTxt
             // 
-            this.textBox3.Location = new System.Drawing.Point(350, 11);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 14;
+            this.personelTelefonTxt.Location = new System.Drawing.Point(350, 11);
+            this.personelTelefonTxt.Name = "personelTelefonTxt";
+            this.personelTelefonTxt.Size = new System.Drawing.Size(100, 20);
+            this.personelTelefonTxt.TabIndex = 14;
+            this.personelTelefonTxt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.personelTelefonTxt_KeyPress);
             // 
             // label4
             // 
@@ -109,12 +111,12 @@
             this.label4.TabIndex = 10;
             this.label4.Text = "Şifre";
             // 
-            // textBox2
+            // personelSoyadTxt
             // 
-            this.textBox2.Location = new System.Drawing.Point(201, 11);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 13;
+            this.personelSoyadTxt.Location = new System.Drawing.Point(201, 11);
+            this.personelSoyadTxt.Name = "personelSoyadTxt";
+            this.personelSoyadTxt.Size = new System.Drawing.Size(100, 20);
+            this.personelSoyadTxt.TabIndex = 13;
             // 
             // label3
             // 
@@ -143,13 +145,13 @@
             this.soyadTxt.TabIndex = 6;
             this.soyadTxt.Text = "Soyad";
             // 
-            // textBox6
+            // personelAdresTxt
             // 
-            this.textBox6.Location = new System.Drawing.Point(52, 37);
-            this.textBox6.Multiline = true;
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(249, 55);
-            this.textBox6.TabIndex = 12;
+            this.personelAdresTxt.Location = new System.Drawing.Point(52, 37);
+            this.personelAdresTxt.Multiline = true;
+            this.personelAdresTxt.Name = "personelAdresTxt";
+            this.personelAdresTxt.Size = new System.Drawing.Size(249, 55);
+            this.personelAdresTxt.TabIndex = 12;
             // 
             // label5
             // 
@@ -160,12 +162,12 @@
             this.label5.TabIndex = 5;
             this.label5.Text = "Adres";
             // 
-            // textBox1
+            // personelAdıTxt
             // 
-            this.textBox1.Location = new System.Drawing.Point(52, 11);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 18;
+            this.personelAdıTxt.Location = new System.Drawing.Point(52, 11);
+            this.personelAdıTxt.Name = "personelAdıTxt";
+            this.personelAdıTxt.Size = new System.Drawing.Size(100, 20);
+            this.personelAdıTxt.TabIndex = 18;
             // 
             // label1
             // 
@@ -185,13 +187,13 @@
             this.label8.TabIndex = 21;
             this.label8.Text = "Bölümü";
             // 
-            // comboBox1
+            // bolumCombo
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(631, 37);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(131, 21);
-            this.comboBox1.TabIndex = 22;
+            this.bolumCombo.FormattingEnabled = true;
+            this.bolumCombo.Location = new System.Drawing.Point(631, 37);
+            this.bolumCombo.Name = "bolumCombo";
+            this.bolumCombo.Size = new System.Drawing.Size(131, 21);
+            this.bolumCombo.TabIndex = 22;
             // 
             // groupBox1
             // 
@@ -215,6 +217,7 @@
             this.guncelleRadio.TabStop = true;
             this.guncelleRadio.Text = "Güncelle";
             this.guncelleRadio.UseVisualStyleBackColor = true;
+            this.guncelleRadio.Click += new System.EventHandler(this.guncelleRadio_Click);
             // 
             // silRadio
             // 
@@ -237,6 +240,7 @@
             this.ekleRadio.TabStop = true;
             this.ekleRadio.Text = "Ekle";
             this.ekleRadio.UseVisualStyleBackColor = true;
+            this.ekleRadio.Click += new System.EventHandler(this.ekleRadio_Click);
             // 
             // dataGridView1
             // 
@@ -251,32 +255,33 @@
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(733, 233);
             this.dataGridView1.TabIndex = 24;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
-            // personelEkle
+            // personel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(792, 406);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.bolumCombo);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.personelMailTxt);
+            this.Controls.Add(this.sifreTxt);
+            this.Controls.Add(this.kullaiciAdıTxt);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.personelTelefonTxt);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.personelSoyadTxt);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.soyadTxt);
-            this.Controls.Add(this.textBox6);
+            this.Controls.Add(this.personelAdresTxt);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.personelAdıTxt);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "personelEkle";
+            this.Name = "personel";
             this.Text = "personelEkle";
             this.Load += new System.EventHandler(this.personelEkle_Load);
             this.groupBox1.ResumeLayout(false);
@@ -290,22 +295,22 @@
         #endregion
 
         private System.Windows.Forms.Button aboneKytButon;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox personelMailTxt;
+        private System.Windows.Forms.TextBox sifreTxt;
+        private System.Windows.Forms.TextBox kullaiciAdıTxt;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox personelTelefonTxt;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox personelSoyadTxt;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label soyadTxt;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox personelAdresTxt;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox personelAdıTxt;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox bolumCombo;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.RadioButton guncelleRadio;
         private System.Windows.Forms.RadioButton silRadio;

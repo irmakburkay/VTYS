@@ -35,10 +35,3 @@ C:\Users\Burkay\Documents\GitHub\VTYS\CAS\CAS\obj\Debug\CAS.dergiGazete.resource
 C:\Users\Burkay\Documents\GitHub\VTYS\CAS\CAS\obj\Debug\CAS.fiyatTipi.resources
 C:\Users\Burkay\Documents\GitHub\VTYS\CAS\CAS\obj\Debug\CAS.personel.resources
 C:\Users\Burkay\Documents\GitHub\VTYS\CAS\CAS\obj\Debug\CAS.tur.resources
-C:\Users\musta\source\repos\irmakburkay\VTYS\CAS\CAS\obj\Debug\CAS.abonelikRapor.resources
-C:\Users\musta\source\repos\irmakburkay\VTYS\CAS\CAS\obj\Debug\CAS.aboneRapor.resources
-C:\Users\musta\source\repos\irmakburkay\VTYS\CAS\CAS\obj\Debug\CAS.bolumRapor.resources
-C:\Users\musta\source\repos\irmakburkay\VTYS\CAS\CAS\obj\Debug\CAS.dergiGazateRapor.resources
-C:\Users\musta\source\repos\irmakburkay\VTYS\CAS\CAS\obj\Debug\CAS.fiyatRapor.resources
-C:\Users\musta\source\repos\irmakburkay\VTYS\CAS\CAS\obj\Debug\CAS.personelRapor.resources
-C:\Users\musta\source\repos\irmakburkay\VTYS\CAS\CAS\obj\Debug\CAS.turRapor.resources

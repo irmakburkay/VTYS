@@ -30,17 +30,21 @@ namespace CAS
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.aboneAdıTxt = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.soyadTxt = new System.Windows.Forms.Label();
-            this.aboneSoyadTxt = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.aboneTelTxt = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBox5 = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.aboneAdresTxt = new System.Windows.Forms.TextBox();
+            this.textBox6 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.aboneDate = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label7 = new System.Windows.Forms.Label();
-            this.aboneMailTxt = new System.Windows.Forms.TextBox();
+            this.textBox7 = new System.Windows.Forms.TextBox();
             this.aboneKytButon = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -60,12 +64,12 @@ namespace CAS
             this.label1.TabIndex = 0;
             this.label1.Text = "Ad";
             // 
-            // aboneAdıTxt
+            // textBox1
             // 
-            this.aboneAdıTxt.Location = new System.Drawing.Point(57, 26);
-            this.aboneAdıTxt.Name = "aboneAdıTxt";
-            this.aboneAdıTxt.Size = new System.Drawing.Size(100, 20);
-            this.aboneAdıTxt.TabIndex = 1;
+            this.textBox1.Location = new System.Drawing.Point(57, 26);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 20);
+            this.textBox1.TabIndex = 1;
             // 
             // soyadTxt
             // 
@@ -76,12 +80,12 @@ namespace CAS
             this.soyadTxt.TabIndex = 0;
             this.soyadTxt.Text = "Soyad";
             // 
-            // aboneSoyadTxt
+            // textBox2
             // 
-            this.aboneSoyadTxt.Location = new System.Drawing.Point(206, 26);
-            this.aboneSoyadTxt.Name = "aboneSoyadTxt";
-            this.aboneSoyadTxt.Size = new System.Drawing.Size(100, 20);
-            this.aboneSoyadTxt.TabIndex = 1;
+            this.textBox2.Location = new System.Drawing.Point(206, 26);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(100, 20);
+            this.textBox2.TabIndex = 1;
             // 
             // label2
             // 
@@ -92,13 +96,44 @@ namespace CAS
             this.label2.TabIndex = 0;
             this.label2.Text = "Telefon";
             // 
-            // aboneTelTxt
+            // textBox3
             // 
-            this.aboneTelTxt.Location = new System.Drawing.Point(355, 26);
-            this.aboneTelTxt.Name = "aboneTelTxt";
-            this.aboneTelTxt.Size = new System.Drawing.Size(100, 20);
-            this.aboneTelTxt.TabIndex = 1;
-            this.aboneTelTxt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.aboneTelTxt_KeyPress);
+            this.textBox3.Location = new System.Drawing.Point(355, 26);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(100, 20);
+            this.textBox3.TabIndex = 1;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(460, 29);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(64, 13);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "Kullanıcı Adı";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(634, 29);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(28, 13);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "Şifre";
+            // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(530, 26);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(100, 20);
+            this.textBox4.TabIndex = 1;
+            // 
+            // textBox5
+            // 
+            this.textBox5.Location = new System.Drawing.Point(668, 26);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(100, 20);
+            this.textBox5.TabIndex = 1;
             // 
             // label5
             // 
@@ -109,13 +144,13 @@ namespace CAS
             this.label5.TabIndex = 0;
             this.label5.Text = "Adres";
             // 
-            // aboneAdresTxt
+            // textBox6
             // 
-            this.aboneAdresTxt.Location = new System.Drawing.Point(57, 52);
-            this.aboneAdresTxt.Multiline = true;
-            this.aboneAdresTxt.Name = "aboneAdresTxt";
-            this.aboneAdresTxt.Size = new System.Drawing.Size(249, 48);
-            this.aboneAdresTxt.TabIndex = 1;
+            this.textBox6.Location = new System.Drawing.Point(57, 52);
+            this.textBox6.Multiline = true;
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(249, 48);
+            this.textBox6.TabIndex = 1;
             // 
             // label6
             // 
@@ -126,28 +161,28 @@ namespace CAS
             this.label6.TabIndex = 0;
             this.label6.Text = "Kayıt Tarihi";
             // 
-            // aboneDate
+            // dateTimePicker1
             // 
-            this.aboneDate.Location = new System.Drawing.Point(378, 55);
-            this.aboneDate.Name = "aboneDate";
-            this.aboneDate.Size = new System.Drawing.Size(135, 20);
-            this.aboneDate.TabIndex = 2;
+            this.dateTimePicker1.Location = new System.Drawing.Point(378, 55);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(135, 20);
+            this.dateTimePicker1.TabIndex = 2;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(464, 29);
+            this.label7.Location = new System.Drawing.Point(528, 55);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(36, 13);
             this.label7.TabIndex = 0;
             this.label7.Text = "E-Mail";
             // 
-            // aboneMailTxt
+            // textBox7
             // 
-            this.aboneMailTxt.Location = new System.Drawing.Point(506, 26);
-            this.aboneMailTxt.Name = "aboneMailTxt";
-            this.aboneMailTxt.Size = new System.Drawing.Size(213, 20);
-            this.aboneMailTxt.TabIndex = 1;
+            this.textBox7.Location = new System.Drawing.Point(570, 52);
+            this.textBox7.Name = "textBox7";
+            this.textBox7.Size = new System.Drawing.Size(198, 20);
+            this.textBox7.TabIndex = 1;
             // 
             // aboneKytButon
             // 
@@ -165,14 +200,13 @@ namespace CAS
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCellsExceptHeaders;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 143);
+            this.dataGridView1.Location = new System.Drawing.Point(12, 166);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(707, 237);
+            this.dataGridView1.Size = new System.Drawing.Size(756, 214);
             this.dataGridView1.TabIndex = 25;
-            this.dataGridView1.Click += new System.EventHandler(this.dataGridView1_Click);
             // 
             // groupBox1
             // 
@@ -180,7 +214,7 @@ namespace CAS
             this.groupBox1.Controls.Add(this.silRadio);
             this.groupBox1.Controls.Add(this.ekleRadio);
             this.groupBox1.Controls.Add(this.aboneKytButon);
-            this.groupBox1.Location = new System.Drawing.Point(519, 55);
+            this.groupBox1.Location = new System.Drawing.Point(568, 78);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(200, 82);
             this.groupBox1.TabIndex = 26;
@@ -196,7 +230,6 @@ namespace CAS
             this.guncelleRadio.TabStop = true;
             this.guncelleRadio.Text = "Güncelle";
             this.guncelleRadio.UseVisualStyleBackColor = true;
-            this.guncelleRadio.Click += new System.EventHandler(this.guncelleRadio_Click);
             // 
             // silRadio
             // 
@@ -219,34 +252,36 @@ namespace CAS
             this.ekleRadio.TabStop = true;
             this.ekleRadio.Text = "Ekle";
             this.ekleRadio.UseVisualStyleBackColor = true;
-            this.ekleRadio.Click += new System.EventHandler(this.ekleRadio_Click);
             // 
             // abone
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(732, 392);
+            this.ClientSize = new System.Drawing.Size(780, 392);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.aboneDate);
-            this.Controls.Add(this.aboneMailTxt);
+            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.textBox7);
+            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.textBox4);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.aboneTelTxt);
-            this.Controls.Add(this.aboneSoyadTxt);
+            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.textBox2);
             this.Controls.Add(this.label6);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.soyadTxt);
-            this.Controls.Add(this.aboneAdresTxt);
+            this.Controls.Add(this.textBox6);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.aboneAdıTxt);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "abone";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "aboneEkle";
-            this.Load += new System.EventHandler(this.abone_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -258,17 +293,21 @@ namespace CAS
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox aboneAdıTxt;
+        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label soyadTxt;
-        private System.Windows.Forms.TextBox aboneSoyadTxt;
+        private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox aboneTelTxt;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox aboneAdresTxt;
+        private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.DateTimePicker aboneDate;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox aboneMailTxt;
+        private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.Button aboneKytButon;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.GroupBox groupBox1;

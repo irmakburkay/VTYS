@@ -41,170 +41,160 @@
             this.aboneAdıTxt = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.goruntule = new System.Windows.Forms.Button();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.date_cb = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // aboneDate
             // 
-            this.aboneDate.Location = new System.Drawing.Point(373, 71);
+            this.aboneDate.Location = new System.Drawing.Point(497, 87);
+            this.aboneDate.Margin = new System.Windows.Forms.Padding(4);
             this.aboneDate.Name = "aboneDate";
-            this.aboneDate.Size = new System.Drawing.Size(135, 20);
+            this.aboneDate.Size = new System.Drawing.Size(179, 22);
             this.aboneDate.TabIndex = 14;
+            this.aboneDate.ValueChanged += new System.EventHandler(this.aboneDate_ValueChanged);
             // 
             // aboneMailTxt
             // 
-            this.aboneMailTxt.Location = new System.Drawing.Point(501, 12);
+            this.aboneMailTxt.Location = new System.Drawing.Point(668, 15);
+            this.aboneMailTxt.Margin = new System.Windows.Forms.Padding(4);
             this.aboneMailTxt.Name = "aboneMailTxt";
-            this.aboneMailTxt.Size = new System.Drawing.Size(218, 20);
+            this.aboneMailTxt.Size = new System.Drawing.Size(289, 22);
             this.aboneMailTxt.TabIndex = 9;
+            this.aboneMailTxt.TextChanged += new System.EventHandler(this.aboneMailTxt_TextChanged);
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(459, 15);
+            this.label7.Location = new System.Drawing.Point(612, 18);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(36, 13);
+            this.label7.Size = new System.Drawing.Size(47, 17);
             this.label7.TabIndex = 3;
             this.label7.Text = "E-Mail";
             // 
             // aboneTelTxt
             // 
-            this.aboneTelTxt.Location = new System.Drawing.Point(350, 12);
+            this.aboneTelTxt.Location = new System.Drawing.Point(467, 15);
+            this.aboneTelTxt.Margin = new System.Windows.Forms.Padding(4);
             this.aboneTelTxt.Name = "aboneTelTxt";
-            this.aboneTelTxt.Size = new System.Drawing.Size(100, 20);
+            this.aboneTelTxt.Size = new System.Drawing.Size(132, 22);
             this.aboneTelTxt.TabIndex = 10;
+            this.aboneTelTxt.TextChanged += new System.EventHandler(this.aboneTelTxt_TextChanged);
             // 
             // aboneSoyadTxt
             // 
-            this.aboneSoyadTxt.Location = new System.Drawing.Point(201, 12);
+            this.aboneSoyadTxt.Location = new System.Drawing.Point(268, 15);
+            this.aboneSoyadTxt.Margin = new System.Windows.Forms.Padding(4);
             this.aboneSoyadTxt.Name = "aboneSoyadTxt";
-            this.aboneSoyadTxt.Size = new System.Drawing.Size(100, 20);
+            this.aboneSoyadTxt.Size = new System.Drawing.Size(132, 22);
             this.aboneSoyadTxt.TabIndex = 11;
+            this.aboneSoyadTxt.TextChanged += new System.EventHandler(this.aboneSoyadTxt_TextChanged);
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(307, 71);
+            this.label6.Location = new System.Drawing.Point(409, 87);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(59, 13);
+            this.label6.Size = new System.Drawing.Size(79, 17);
             this.label6.TabIndex = 4;
             this.label6.Text = "Kayıt Tarihi";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(307, 15);
+            this.label2.Location = new System.Drawing.Point(409, 18);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(43, 13);
+            this.label2.Size = new System.Drawing.Size(56, 17);
             this.label2.TabIndex = 5;
             this.label2.Text = "Telefon";
             // 
             // soyadTxt
             // 
             this.soyadTxt.AutoSize = true;
-            this.soyadTxt.Location = new System.Drawing.Point(158, 15);
+            this.soyadTxt.Location = new System.Drawing.Point(211, 18);
+            this.soyadTxt.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.soyadTxt.Name = "soyadTxt";
-            this.soyadTxt.Size = new System.Drawing.Size(37, 13);
+            this.soyadTxt.Size = new System.Drawing.Size(48, 17);
             this.soyadTxt.TabIndex = 6;
             this.soyadTxt.Text = "Soyad";
             // 
             // aboneAdresTxt
             // 
-            this.aboneAdresTxt.Location = new System.Drawing.Point(52, 43);
+            this.aboneAdresTxt.Location = new System.Drawing.Point(69, 53);
+            this.aboneAdresTxt.Margin = new System.Windows.Forms.Padding(4);
             this.aboneAdresTxt.Multiline = true;
             this.aboneAdresTxt.Name = "aboneAdresTxt";
-            this.aboneAdresTxt.Size = new System.Drawing.Size(249, 48);
+            this.aboneAdresTxt.Size = new System.Drawing.Size(331, 58);
             this.aboneAdresTxt.TabIndex = 12;
+            this.aboneAdresTxt.TextChanged += new System.EventHandler(this.aboneAdresTxt_TextChanged);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(12, 46);
+            this.label5.Location = new System.Drawing.Point(16, 57);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(34, 13);
+            this.label5.Size = new System.Drawing.Size(45, 17);
             this.label5.TabIndex = 7;
             this.label5.Text = "Adres";
             // 
             // aboneAdıTxt
             // 
-            this.aboneAdıTxt.Location = new System.Drawing.Point(30, 19);
+            this.aboneAdıTxt.Location = new System.Drawing.Point(69, 15);
+            this.aboneAdıTxt.Margin = new System.Windows.Forms.Padding(4);
             this.aboneAdıTxt.Name = "aboneAdıTxt";
-            this.aboneAdıTxt.Size = new System.Drawing.Size(100, 20);
+            this.aboneAdıTxt.Size = new System.Drawing.Size(132, 22);
             this.aboneAdıTxt.TabIndex = 13;
+            this.aboneAdıTxt.TextChanged += new System.EventHandler(this.aboneAdıTxt_TextChanged);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(4, 22);
+            this.label1.Location = new System.Drawing.Point(34, 19);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(20, 13);
+            this.label1.Size = new System.Drawing.Size(25, 17);
             this.label1.TabIndex = 8;
             this.label1.Text = "Ad";
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCellsExceptHeaders;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 174);
+            this.dataGridView1.Location = new System.Drawing.Point(13, 249);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(707, 264);
-            this.dataGridView1.TabIndex = 15;
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.RowHeadersVisible = false;
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView1.Size = new System.Drawing.Size(943, 292);
+            this.dataGridView1.TabIndex = 26;
             // 
-            // goruntule
+            // date_cb
             // 
-            this.goruntule.Location = new System.Drawing.Point(551, 122);
-            this.goruntule.Name = "goruntule";
-            this.goruntule.Size = new System.Drawing.Size(85, 37);
-            this.goruntule.TabIndex = 16;
-            this.goruntule.Text = "Görüntüle";
-            this.goruntule.UseVisualStyleBackColor = true;
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.radioButton2);
-            this.groupBox1.Controls.Add(this.radioButton1);
-            this.groupBox1.Controls.Add(this.aboneAdıTxt);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(39, 97);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(233, 62);
-            this.groupBox1.TabIndex = 17;
-            this.groupBox1.TabStop = false;
-            // 
-            // radioButton1
-            // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(136, 14);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(44, 17);
-            this.radioButton1.TabIndex = 14;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "And";
-            this.radioButton1.UseVisualStyleBackColor = true;
-            // 
-            // radioButton2
-            // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(136, 33);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(36, 17);
-            this.radioButton2.TabIndex = 14;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Or";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.date_cb.AutoSize = true;
+            this.date_cb.Location = new System.Drawing.Point(683, 88);
+            this.date_cb.Name = "date_cb";
+            this.date_cb.Size = new System.Drawing.Size(18, 17);
+            this.date_cb.TabIndex = 27;
+            this.date_cb.UseVisualStyleBackColor = true;
+            this.date_cb.CheckedChanged += new System.EventHandler(this.date_cb_CheckedChanged);
             // 
             // aboneRapor
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(731, 450);
-            this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.goruntule);
+            this.ClientSize = new System.Drawing.Size(975, 554);
+            this.Controls.Add(this.date_cb);
             this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.aboneAdıTxt);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.aboneDate);
             this.Controls.Add(this.aboneMailTxt);
             this.Controls.Add(this.label7);
@@ -216,11 +206,11 @@
             this.Controls.Add(this.aboneAdresTxt);
             this.Controls.Add(this.label5);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "aboneRapor";
             this.Text = "aboneRapor";
+            this.Load += new System.EventHandler(this.aboneRapor_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -241,9 +231,6 @@
         private System.Windows.Forms.TextBox aboneAdıTxt;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button goruntule;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.CheckBox date_cb;
     }
 }

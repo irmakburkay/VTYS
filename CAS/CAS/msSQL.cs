@@ -12,13 +12,29 @@ namespace CAS
 
     public class msSQL
     {
-        public SqlConnection connection = new SqlConnection("Server=localhost;Database=JAS;Trusted_Connection=True;");  //programın açılmasıyla yapılan kullanıcı girişi ile kurulacak bağlantı nesnesi
+        public SqlConnection connection;  //programın açılmasıyla yapılan kullanıcı girişi ile kurulacak bağlantı nesnesi
         public SqlCommand command = new SqlCommand();       //sql komutlarını tutup çalıştıracak nesne
         public SqlDataAdapter adapter;                      //tablo çekmek için aracı nesne
 
-        public msSQL()
+
+        public msSQL(string server="JAS")
         {
+            connection = new SqlConnection("Server=localhost;Database=" + server + ";Trusted_Connection=True;");
             command.Connection = connection;                //command nesnesinin bağlantısını connection olarak atıyor (komutların üzerinde çalışacağı veritabanını belirliyor)
+        }
+
+        public msSQL(string user, string password)
+        {
+            try
+            {
+                connection = new SqlConnection("Server=localhost;Database=JAS;user ID=" + user + ";password=" + password + ";Trusted_Connection=True;");
+                command.Connection = connection;                //command nesnesinin bağlantısını connection olarak atıyor (komutların üzerinde çalışacağı veritabanını belirliyor)
+            }
+            catch (SqlException e)
+            {
+                MessageBox.Show(e.Message);
+                throw;
+            }
         }
 
         public void sqlIslem(String sql)                    //veritabanından veri döndürmeden sadece sql komutlarını çalıştıran fonksiyon

@@ -42,3 +42,12 @@ C:\Users\musta\source\repos\irmakburkay\VTYS\CAS\CAS\obj\Debug\CAS.dergiGazateRa
 C:\Users\musta\source\repos\irmakburkay\VTYS\CAS\CAS\obj\Debug\CAS.fiyatRapor.resources
 C:\Users\musta\source\repos\irmakburkay\VTYS\CAS\CAS\obj\Debug\CAS.personelRapor.resources
 C:\Users\musta\source\repos\irmakburkay\VTYS\CAS\CAS\obj\Debug\CAS.turRapor.resources
+C:\Users\Burkay\Documents\GitHub\VTYS\CAS\CAS\obj\Debug\CAS.csproj.ResolveComReference.cache
+C:\Users\Burkay\Documents\GitHub\VTYS\CAS\CAS\obj\Debug\CAS.abonelikRapor.resources
+C:\Users\Burkay\Documents\GitHub\VTYS\CAS\CAS\obj\Debug\CAS.aboneRapor.resources
+C:\Users\Burkay\Documents\GitHub\VTYS\CAS\CAS\obj\Debug\CAS.bolumRapor.resources
+C:\Users\Burkay\Documents\GitHub\VTYS\CAS\CAS\obj\Debug\CAS.dergiGazateRapor.resources
+C:\Users\Burkay\Documents\GitHub\VTYS\CAS\CAS\obj\Debug\CAS.fiyatRapor.resources
+C:\Users\Burkay\Documents\GitHub\VTYS\CAS\CAS\obj\Debug\CAS.genelRapor.resources
+C:\Users\Burkay\Documents\GitHub\VTYS\CAS\CAS\obj\Debug\CAS.personelRapor.resources
+C:\Users\Burkay\Documents\GitHub\VTYS\CAS\CAS\obj\Debug\CAS.turRapor.resources

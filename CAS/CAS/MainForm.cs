@@ -139,5 +139,42 @@ namespace CAS
             fk.nav(bolumRapor);
             this.CenterToScreen();
         }
+
+        private void yedekleToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            msSQL ms = new msSQL();
+            try
+            {
+                ms.sqlIslem("use JAS exec backupdatabase");
+                MessageBox.Show("Yedekleme Başarıyla Tamamlandı!");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Yedekleme İşlemi Tamamlanamadı!\n"+ex.Message);
+                throw;
+            }
+        }
+
+        private void geriYükleToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            msSQL ms = new msSQL("master");
+            try
+            {
+                ms.sqlIslem("USE [master] ALTER DATABASE[JAS] SET SINGLE_USER WITH ROLLBACK IMMEDIATE RESTORE DATABASE[JAS] FROM  DISK = N'D:\\JAS.bak' WITH  FILE = 8, NOUNLOAD, REPLACE, STATS = 5 ALTER DATABASE[JAS] SET MULTI_USER"); 
+                MessageBox.Show("Geri Yükleme Başarıyla Tamamlandı!");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Geri Yükleme İşlemi Tamamlanamadı!\n" + ex.Message);
+                throw;
+            }
+        }
+
+        private void nvbrGenelRaporlar_Click(object sender, EventArgs e)
+        {
+            genelRapor genelRapor = new genelRapor();
+            fk.nav(genelRapor);
+            this.CenterToScreen();
+        }
     }
 }

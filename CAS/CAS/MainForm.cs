@@ -90,5 +90,54 @@ namespace CAS
             fk.nav(blm);
             this.CenterToScreen();
         }
+
+        private void raporToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            aboneRapor abone = new aboneRapor();
+            fk.nav(abone);
+            this.CenterToScreen();
+        }
+
+        private void raporlaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            abonelikRapor abonelikRapor = new abonelikRapor();
+            fk.nav(abonelikRapor);
+            this.CenterToScreen();
+        }
+
+        private void raporlaToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            dergiGazateRapor dergiGazateRapor = new dergiGazateRapor();
+            fk.nav(dergiGazateRapor);
+            this.CenterToScreen();
+        }
+
+        private void raporlaToolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            turRapor turRapor = new turRapor();
+            fk.nav(turRapor);
+            this.CenterToScreen();
+        }
+
+        private void raporlaToolStripMenuItem3_Click(object sender, EventArgs e)
+        {
+            fiyatRapor fiyatRapor = new fiyatRapor();
+            fk.nav(fiyatRapor);
+            this.CenterToScreen();
+        }
+
+        private void raporToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            personelRapor personelRapor = new personelRapor();
+            fk.nav(personelRapor);
+            this.CenterToScreen();
+        }
+
+        private void raporlaToolStripMenuItem4_Click(object sender, EventArgs e)
+        {
+            bolumRapor bolumRapor = new bolumRapor();
+            fk.nav(bolumRapor);
+            this.CenterToScreen();
+        }
     }
 }

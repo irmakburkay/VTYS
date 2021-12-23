@@ -48,67 +48,75 @@
             // 
             // baslangıcDate
             // 
-            this.baslangıcDate.Location = new System.Drawing.Point(111, 40);
+            this.baslangıcDate.Location = new System.Drawing.Point(148, 49);
+            this.baslangıcDate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.baslangıcDate.Name = "baslangıcDate";
-            this.baslangıcDate.Size = new System.Drawing.Size(135, 20);
+            this.baslangıcDate.Size = new System.Drawing.Size(179, 22);
             this.baslangıcDate.TabIndex = 19;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(23, 44);
+            this.label6.Location = new System.Drawing.Point(31, 54);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(82, 13);
+            this.label6.Size = new System.Drawing.Size(109, 17);
             this.label6.TabIndex = 11;
             this.label6.Text = "Başlangıç Tarihi";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(264, 44);
+            this.label1.Location = new System.Drawing.Point(491, 55);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(55, 13);
+            this.label1.Size = new System.Drawing.Size(74, 17);
             this.label1.TabIndex = 11;
             this.label1.Text = "Bitiş Tarihi";
             // 
             // bitisDate
             // 
-            this.bitisDate.Location = new System.Drawing.Point(325, 40);
+            this.bitisDate.Location = new System.Drawing.Point(572, 50);
+            this.bitisDate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bitisDate.Name = "bitisDate";
-            this.bitisDate.Size = new System.Drawing.Size(137, 20);
+            this.bitisDate.Size = new System.Drawing.Size(181, 22);
             this.bitisDate.TabIndex = 19;
             // 
             // aboneAdıCombo
             // 
             this.aboneAdıCombo.FormattingEnabled = true;
-            this.aboneAdıCombo.Location = new System.Drawing.Point(88, 13);
+            this.aboneAdıCombo.Location = new System.Drawing.Point(117, 16);
+            this.aboneAdıCombo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.aboneAdıCombo.Name = "aboneAdıCombo";
-            this.aboneAdıCombo.Size = new System.Drawing.Size(158, 21);
+            this.aboneAdıCombo.Size = new System.Drawing.Size(209, 24);
             this.aboneAdıCombo.TabIndex = 21;
             // 
             // icerikAdıCombo
             // 
             this.icerikAdıCombo.FormattingEnabled = true;
-            this.icerikAdıCombo.Location = new System.Drawing.Point(325, 12);
+            this.icerikAdıCombo.Location = new System.Drawing.Point(572, 16);
+            this.icerikAdıCombo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.icerikAdıCombo.Name = "icerikAdıCombo";
-            this.icerikAdıCombo.Size = new System.Drawing.Size(137, 21);
+            this.icerikAdıCombo.Size = new System.Drawing.Size(181, 24);
             this.icerikAdıCombo.TabIndex = 21;
             // 
             // aboneLbl
             // 
             this.aboneLbl.AutoSize = true;
-            this.aboneLbl.Location = new System.Drawing.Point(23, 17);
+            this.aboneLbl.Location = new System.Drawing.Point(31, 21);
+            this.aboneLbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.aboneLbl.Name = "aboneLbl";
-            this.aboneLbl.Size = new System.Drawing.Size(56, 13);
+            this.aboneLbl.Size = new System.Drawing.Size(73, 17);
             this.aboneLbl.TabIndex = 11;
             this.aboneLbl.Text = "Abone Adı";
             // 
             // icerikLbl
             // 
             this.icerikLbl.AutoSize = true;
-            this.icerikLbl.Location = new System.Drawing.Point(268, 17);
+            this.icerikLbl.Location = new System.Drawing.Point(496, 22);
+            this.icerikLbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.icerikLbl.Name = "icerikLbl";
-            this.icerikLbl.Size = new System.Drawing.Size(51, 13);
+            this.icerikLbl.Size = new System.Drawing.Size(65, 17);
             this.icerikLbl.TabIndex = 11;
             this.icerikLbl.Text = "İçerik Adı";
             // 
@@ -118,13 +126,14 @@
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCellsExceptHeaders;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 156);
+            this.dataGridView1.Location = new System.Drawing.Point(16, 192);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(464, 180);
+            this.dataGridView1.Size = new System.Drawing.Size(784, 222);
             this.dataGridView1.TabIndex = 26;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
@@ -134,18 +143,21 @@
             this.groupBox1.Controls.Add(this.silRadio);
             this.groupBox1.Controls.Add(this.ekleRadio);
             this.groupBox1.Controls.Add(this.aboneKytButon);
-            this.groupBox1.Location = new System.Drawing.Point(280, 66);
+            this.groupBox1.Location = new System.Drawing.Point(512, 82);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(182, 84);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Size = new System.Drawing.Size(243, 103);
             this.groupBox1.TabIndex = 27;
             this.groupBox1.TabStop = false;
             // 
             // guncelleRadio
             // 
             this.guncelleRadio.AutoSize = true;
-            this.guncelleRadio.Location = new System.Drawing.Point(102, 57);
+            this.guncelleRadio.Location = new System.Drawing.Point(136, 70);
+            this.guncelleRadio.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guncelleRadio.Name = "guncelleRadio";
-            this.guncelleRadio.Size = new System.Drawing.Size(67, 17);
+            this.guncelleRadio.Size = new System.Drawing.Size(85, 21);
             this.guncelleRadio.TabIndex = 22;
             this.guncelleRadio.TabStop = true;
             this.guncelleRadio.Text = "Güncelle";
@@ -154,9 +166,10 @@
             // silRadio
             // 
             this.silRadio.AutoSize = true;
-            this.silRadio.Location = new System.Drawing.Point(102, 34);
+            this.silRadio.Location = new System.Drawing.Point(136, 42);
+            this.silRadio.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.silRadio.Name = "silRadio";
-            this.silRadio.Size = new System.Drawing.Size(36, 17);
+            this.silRadio.Size = new System.Drawing.Size(44, 21);
             this.silRadio.TabIndex = 23;
             this.silRadio.TabStop = true;
             this.silRadio.Text = "Sil";
@@ -165,9 +178,10 @@
             // ekleRadio
             // 
             this.ekleRadio.AutoSize = true;
-            this.ekleRadio.Location = new System.Drawing.Point(102, 11);
+            this.ekleRadio.Location = new System.Drawing.Point(136, 14);
+            this.ekleRadio.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.ekleRadio.Name = "ekleRadio";
-            this.ekleRadio.Size = new System.Drawing.Size(46, 17);
+            this.ekleRadio.Size = new System.Drawing.Size(56, 21);
             this.ekleRadio.TabIndex = 24;
             this.ekleRadio.TabStop = true;
             this.ekleRadio.Text = "Ekle";
@@ -175,9 +189,10 @@
             // 
             // aboneKytButon
             // 
-            this.aboneKytButon.Location = new System.Drawing.Point(6, 11);
+            this.aboneKytButon.Location = new System.Drawing.Point(8, 14);
+            this.aboneKytButon.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.aboneKytButon.Name = "aboneKytButon";
-            this.aboneKytButon.Size = new System.Drawing.Size(90, 32);
+            this.aboneKytButon.Size = new System.Drawing.Size(120, 39);
             this.aboneKytButon.TabIndex = 3;
             this.aboneKytButon.Text = "Kaydet";
             this.aboneKytButon.UseVisualStyleBackColor = true;
@@ -185,9 +200,9 @@
             // 
             // abonelik
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(488, 348);
+            this.ClientSize = new System.Drawing.Size(813, 428);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.icerikAdıCombo);
@@ -199,6 +214,7 @@
             this.Controls.Add(this.baslangıcDate);
             this.Controls.Add(this.label6);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "abonelik";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "abonelikEkle";

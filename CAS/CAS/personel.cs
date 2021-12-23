@@ -28,11 +28,11 @@ namespace CAS
             bolumCombo.SelectedIndex = -1;
             bolumCombo.Text = "";
             bolumCombo.Items.Clear();
-            foreach (DataRow row in mssql.sqlTablo("select bolumID from bolum").Rows)       //comboBox daki elemanları veritabanından çeken kod
+            foreach (DataRow row in mssql.sqlTablo("select bolumAdi from bolum").Rows)       //comboBox daki elemanları veritabanından çeken kod
                 bolumCombo.Items.Add(row.ItemArray[0].ToString());
             dataGridView1.DataSource = mssql.sqlTablo("select " +
                 "personelID as 'Personel Numarası'," +     //datagridview içini veritabanından dolduran kod
-                "bolumID as 'Bölüm Numarası'," +
+                "bolum.bolumAdi as 'Bölüm Adı'," +
                 "ad as 'Personel Adı'," +
                 "soyad as 'Personel Soyadı'," +
                 "tel as 'Telefon'," +
@@ -40,7 +40,7 @@ namespace CAS
                 "sifre as 'Şifre'," +
                 "adres as 'Adres'," +
                 "eMail as 'E-Mail'" +
-                "from personel");
+                "from personel,bolum where bolum.bolumID = personel.bolumID");
 
         }
 
@@ -55,7 +55,7 @@ namespace CAS
                 case 0:     //ekleme işlemi 
                     if (!(bolumCombo.SelectedIndex == -1)||personelAdresTxt.Text!=""|| personelAdıTxt.Text != ""|| kullaiciAdıTxt.Text != ""|| personelSoyadTxt.Text != ""|| personelTelefonTxt.Text != ""|| sifreTxt.Text != ""|| personelMailTxt.Text != "")     //eklenecek veriler boş bırakılmadıysa ekleme işlemi yap
                     {
-                        mssql.sqlIslem("insert into personel values('" + bolumCombo.SelectedItem + "','" + personelAdıTxt.Text + "','" + personelSoyadTxt.Text + "','" + personelTelefonTxt .Text+ "','" + kullaiciAdıTxt.Text +"' , '" +sifreTxt.Text + "', '" + personelAdresTxt.Text + "', '" + personelMailTxt.Text + "')");
+                        mssql.sqlIslem("insert into personel values('" + mssql.sqlString("select bolumID from bolum where bolumAdi = '"+ bolumCombo.SelectedItem + "'") + "','" + personelAdıTxt.Text + "','" + personelSoyadTxt.Text + "','" + personelTelefonTxt .Text+ "','" + kullaiciAdıTxt.Text +"' , '" +sifreTxt.Text + "', '" + personelAdresTxt.Text + "', '" + personelMailTxt.Text + "')");
                         MessageBox.Show("Yeni Kayıt Başarıyla Eklendi!");
                     }
                     else
@@ -66,7 +66,7 @@ namespace CAS
                     {
                         if (mssql.sqlString("select count(*) from personel where personelID=" + personelID).Equals("1"))      //güncellenecek kayıt bulunuyorsa ilgili verilerle güncelleme yap
                         {
-                            mssql.sqlIslem("update personel set bolumID='" + bolumCombo.SelectedItem + "', ad='" + personelAdıTxt.Text + "', soyad='" + personelSoyadTxt.Text + "' , tel='" + personelTelefonTxt.Text + "' , kullaniciAdi='" + kullaiciAdıTxt.Text + "' , sifre='" + sifreTxt.Text + "' , adres='" + personelAdresTxt.Text + "' , eMail='" + personelMailTxt.Text+"'where personelID="+personelID);
+                            mssql.sqlIslem("update personel set bolumID='" + mssql.sqlString("select bolumID from bolum where bolumAdi = '" + bolumCombo.SelectedItem + "'") + "', ad='" + personelAdıTxt.Text + "', soyad='" + personelSoyadTxt.Text + "' , tel='" + personelTelefonTxt.Text + "' , kullaniciAdi='" + kullaiciAdıTxt.Text + "' , sifre='" + sifreTxt.Text + "' , adres='" + personelAdresTxt.Text + "' , eMail='" + personelMailTxt.Text+"'where personelID="+personelID);
                             MessageBox.Show(personelID + " Numaralı Kayıt Başarıyla Güncellendi!");
                         }
                         else
@@ -106,7 +106,7 @@ namespace CAS
             sifreTxt.Text= dataGridView1.SelectedRows[0].Cells["Şifre"].Value.ToString();
             personelAdresTxt.Text= dataGridView1.SelectedRows[0].Cells["Adres"].Value.ToString();
             personelMailTxt.Text= dataGridView1.SelectedRows[0].Cells["E-Mail"].Value.ToString();
-            bolumCombo.SelectedIndex = bolumCombo.Items.IndexOf(dataGridView1.SelectedRows[0].Cells["Bölüm Numarası"].Value.ToString());
+            bolumCombo.SelectedIndex = bolumCombo.Items.IndexOf(dataGridView1.SelectedRows[0].Cells["Bölüm Adı"].Value.ToString());
             personelID= dataGridView1.SelectedRows[0].Cells["Personel Numarası"].Value.ToString();
         }
 

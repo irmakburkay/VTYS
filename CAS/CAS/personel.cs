@@ -21,7 +21,7 @@ namespace CAS
         private void personelEkle_Load(object sender, EventArgs e)
         {
             personelTelefonTxt.MaxLength = 11;
-            personelID = "0";                                       //id varsayılan olarak 0 
+            personelID = "0";          //id varsayılan olarak 0 
             ekleRadio.Checked = false;
             silRadio.Checked = false;
             guncelleRadio.Checked = false;

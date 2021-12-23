@@ -10,11 +10,33 @@ using System.Windows.Forms;
 
 namespace CAS
 {
-    public partial class fiyatRapor : Form
+    public partial class fiyatRapor : formlar
     {
         public fiyatRapor()
         {
             InitializeComponent();
+        }
+
+        private void fiyatRapor_Load(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = mssql.sqlTablo("select fiyatID as 'Fiyat Numarası',tip as 'Fiyat Tipi',ucret as 'Fiyat' from fiyat");
+        }
+        public void dtgfiltrele()
+        {
+            string tipsql = " like '%" + tipAdıTxt.Text + "%'", fiyatsql = " like '%" + fiyatTxt.Text.Replace(',', '.') + "%'";
+            dataGridView1.DataSource = mssql.sqlTablo("select fiyatID as 'Fiyat Numarası',tip as 'Fiyat Tipi',ucret as 'Fiyat' " +
+                "from fiyat " +
+                "where tip" + tipsql + " and ucret" + fiyatsql + "");
+        }
+
+        private void tipAdıTxt_TextChanged(object sender, EventArgs e)
+        {
+            dtgfiltrele();
+        }
+
+        private void fiyatTxt_TextChanged(object sender, EventArgs e)
+        {
+            dtgfiltrele();
         }
     }
 }

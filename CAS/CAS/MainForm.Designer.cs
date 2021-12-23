@@ -39,18 +39,26 @@ namespace CAS
             this.nvbrIcerik = new System.Windows.Forms.ToolStripMenuItem();
             this.navbarDergi = new System.Windows.Forms.ToolStripMenuItem();
             this.dergiDuzenle = new System.Windows.Forms.ToolStripMenuItem();
+            this.raporlaToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.navbarTur = new System.Windows.Forms.ToolStripMenuItem();
             this.turDuzenle = new System.Windows.Forms.ToolStripMenuItem();
+            this.raporlaToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.navbarFiyat = new System.Windows.Forms.ToolStripMenuItem();
             this.fiyatDuzenle = new System.Windows.Forms.ToolStripMenuItem();
+            this.raporlaToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
             this.nvbrYtki = new System.Windows.Forms.ToolStripMenuItem();
             this.navbarPersonel = new System.Windows.Forms.ToolStripMenuItem();
             this.personelDuzenle = new System.Windows.Forms.ToolStripMenuItem();
+            this.raporToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.navbarBolum = new System.Windows.Forms.ToolStripMenuItem();
             this.bolumDuzenle = new System.Windows.Forms.ToolStripMenuItem();
+            this.raporlaToolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
+            this.nvbrGenelRaporlar = new System.Windows.Forms.ToolStripMenuItem();
             this.nvbrCıkıs = new System.Windows.Forms.ToolStripMenuItem();
             this.mainPanel = new System.Windows.Forms.Panel();
-            this.nvbrGenelRaporlar = new System.Windows.Forms.ToolStripMenuItem();
+            this.databaseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.yedekleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.geriYükleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.navBar.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -63,12 +71,13 @@ namespace CAS
             this.nvbrIcerik,
             this.nvbrYtki,
             this.nvbrGenelRaporlar,
+            this.databaseToolStripMenuItem,
             this.nvbrCıkıs});
             this.navBar.Location = new System.Drawing.Point(0, 0);
             this.navBar.Name = "navBar";
-            this.navBar.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
+            this.navBar.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
             this.navBar.ShowItemToolTips = true;
-            this.navBar.Size = new System.Drawing.Size(600, 24);
+            this.navBar.Size = new System.Drawing.Size(800, 28);
             this.navBar.TabIndex = 0;
             this.navBar.Text = "Navbar";
             // 
@@ -78,21 +87,22 @@ namespace CAS
             this.aboneDuzenle,
             this.raporToolStripMenuItem});
             this.nvbrAbone.Name = "nvbrAbone";
-            this.nvbrAbone.Size = new System.Drawing.Size(54, 20);
+            this.nvbrAbone.Size = new System.Drawing.Size(67, 24);
             this.nvbrAbone.Text = "Abone";
             // 
             // aboneDuzenle
             // 
             this.aboneDuzenle.Name = "aboneDuzenle";
-            this.aboneDuzenle.Size = new System.Drawing.Size(180, 22);
+            this.aboneDuzenle.Size = new System.Drawing.Size(146, 26);
             this.aboneDuzenle.Text = "Düzenle";
             this.aboneDuzenle.Click += new System.EventHandler(this.ekleToolStripMenuItem_Click);
             // 
             // raporToolStripMenuItem
             // 
             this.raporToolStripMenuItem.Name = "raporToolStripMenuItem";
-            this.raporToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.raporToolStripMenuItem.Text = "Raporlar";
+            this.raporToolStripMenuItem.Size = new System.Drawing.Size(146, 26);
+            this.raporToolStripMenuItem.Text = "Raporla";
+            this.raporToolStripMenuItem.Click += new System.EventHandler(this.raporToolStripMenuItem_Click);
             // 
             // nvbrAbonelik
             // 
@@ -100,21 +110,22 @@ namespace CAS
             this.abonelikDuzenle,
             this.raporlaToolStripMenuItem});
             this.nvbrAbonelik.Name = "nvbrAbonelik";
-            this.nvbrAbonelik.Size = new System.Drawing.Size(66, 20);
+            this.nvbrAbonelik.Size = new System.Drawing.Size(82, 24);
             this.nvbrAbonelik.Text = "Abonelik";
             // 
             // abonelikDuzenle
             // 
             this.abonelikDuzenle.Name = "abonelikDuzenle";
-            this.abonelikDuzenle.Size = new System.Drawing.Size(180, 22);
+            this.abonelikDuzenle.Size = new System.Drawing.Size(146, 26);
             this.abonelikDuzenle.Text = "Düzenle";
             this.abonelikDuzenle.Click += new System.EventHandler(this.ekleToolStripMenuItem1_Click);
             // 
             // raporlaToolStripMenuItem
             // 
             this.raporlaToolStripMenuItem.Name = "raporlaToolStripMenuItem";
-            this.raporlaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.raporlaToolStripMenuItem.Size = new System.Drawing.Size(146, 26);
             this.raporlaToolStripMenuItem.Text = "Raporla";
+            this.raporlaToolStripMenuItem.Click += new System.EventHandler(this.raporlaToolStripMenuItem_Click);
             // 
             // nvbrIcerik
             // 
@@ -123,53 +134,77 @@ namespace CAS
             this.navbarTur,
             this.navbarFiyat});
             this.nvbrIcerik.Name = "nvbrIcerik";
-            this.nvbrIcerik.Size = new System.Drawing.Size(60, 20);
+            this.nvbrIcerik.Size = new System.Drawing.Size(75, 24);
             this.nvbrIcerik.Text = "İçerikler";
             // 
             // navbarDergi
             // 
             this.navbarDergi.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.dergiDuzenle});
+            this.dergiDuzenle,
+            this.raporlaToolStripMenuItem1});
             this.navbarDergi.Name = "navbarDergi";
-            this.navbarDergi.Size = new System.Drawing.Size(180, 22);
+            this.navbarDergi.Size = new System.Drawing.Size(181, 26);
             this.navbarDergi.Text = "Dergi/Gazete";
             // 
             // dergiDuzenle
             // 
             this.dergiDuzenle.Name = "dergiDuzenle";
-            this.dergiDuzenle.Size = new System.Drawing.Size(180, 22);
+            this.dergiDuzenle.Size = new System.Drawing.Size(146, 26);
             this.dergiDuzenle.Text = "Düzenle";
             this.dergiDuzenle.Click += new System.EventHandler(this.ekleToolStripMenuItem2_Click);
+            // 
+            // raporlaToolStripMenuItem1
+            // 
+            this.raporlaToolStripMenuItem1.Name = "raporlaToolStripMenuItem1";
+            this.raporlaToolStripMenuItem1.Size = new System.Drawing.Size(146, 26);
+            this.raporlaToolStripMenuItem1.Text = "Raporla";
+            this.raporlaToolStripMenuItem1.Click += new System.EventHandler(this.raporlaToolStripMenuItem1_Click);
             // 
             // navbarTur
             // 
             this.navbarTur.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.turDuzenle});
+            this.turDuzenle,
+            this.raporlaToolStripMenuItem2});
             this.navbarTur.Name = "navbarTur";
-            this.navbarTur.Size = new System.Drawing.Size(180, 22);
+            this.navbarTur.Size = new System.Drawing.Size(181, 26);
             this.navbarTur.Text = "Tür";
             // 
             // turDuzenle
             // 
             this.turDuzenle.Name = "turDuzenle";
-            this.turDuzenle.Size = new System.Drawing.Size(180, 22);
+            this.turDuzenle.Size = new System.Drawing.Size(146, 26);
             this.turDuzenle.Text = "Düzenle";
             this.turDuzenle.Click += new System.EventHandler(this.ekleToolStripMenuItem3_Click);
+            // 
+            // raporlaToolStripMenuItem2
+            // 
+            this.raporlaToolStripMenuItem2.Name = "raporlaToolStripMenuItem2";
+            this.raporlaToolStripMenuItem2.Size = new System.Drawing.Size(146, 26);
+            this.raporlaToolStripMenuItem2.Text = "Raporla";
+            this.raporlaToolStripMenuItem2.Click += new System.EventHandler(this.raporlaToolStripMenuItem2_Click);
             // 
             // navbarFiyat
             // 
             this.navbarFiyat.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.fiyatDuzenle});
+            this.fiyatDuzenle,
+            this.raporlaToolStripMenuItem3});
             this.navbarFiyat.Name = "navbarFiyat";
-            this.navbarFiyat.Size = new System.Drawing.Size(180, 22);
+            this.navbarFiyat.Size = new System.Drawing.Size(181, 26);
             this.navbarFiyat.Text = "Fiyat";
             // 
             // fiyatDuzenle
             // 
             this.fiyatDuzenle.Name = "fiyatDuzenle";
-            this.fiyatDuzenle.Size = new System.Drawing.Size(180, 22);
+            this.fiyatDuzenle.Size = new System.Drawing.Size(146, 26);
             this.fiyatDuzenle.Text = "Düzenle";
             this.fiyatDuzenle.Click += new System.EventHandler(this.ekleToolStripMenuItem4_Click);
+            // 
+            // raporlaToolStripMenuItem3
+            // 
+            this.raporlaToolStripMenuItem3.Name = "raporlaToolStripMenuItem3";
+            this.raporlaToolStripMenuItem3.Size = new System.Drawing.Size(146, 26);
+            this.raporlaToolStripMenuItem3.Text = "Raporla";
+            this.raporlaToolStripMenuItem3.Click += new System.EventHandler(this.raporlaToolStripMenuItem3_Click);
             // 
             // nvbrYtki
             // 
@@ -177,70 +212,110 @@ namespace CAS
             this.navbarPersonel,
             this.navbarBolum});
             this.nvbrYtki.Name = "nvbrYtki";
-            this.nvbrYtki.Size = new System.Drawing.Size(44, 20);
+            this.nvbrYtki.Size = new System.Drawing.Size(54, 24);
             this.nvbrYtki.Text = "Yetki";
             // 
             // navbarPersonel
             // 
             this.navbarPersonel.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.personelDuzenle});
+            this.personelDuzenle,
+            this.raporToolStripMenuItem1});
             this.navbarPersonel.Name = "navbarPersonel";
-            this.navbarPersonel.Size = new System.Drawing.Size(180, 22);
+            this.navbarPersonel.Size = new System.Drawing.Size(147, 26);
             this.navbarPersonel.Text = "Personel";
             // 
             // personelDuzenle
             // 
             this.personelDuzenle.Name = "personelDuzenle";
-            this.personelDuzenle.Size = new System.Drawing.Size(180, 22);
+            this.personelDuzenle.Size = new System.Drawing.Size(146, 26);
             this.personelDuzenle.Text = "Düzenle";
             this.personelDuzenle.Click += new System.EventHandler(this.ekleToolStripMenuItem5_Click);
+            // 
+            // raporToolStripMenuItem1
+            // 
+            this.raporToolStripMenuItem1.Name = "raporToolStripMenuItem1";
+            this.raporToolStripMenuItem1.Size = new System.Drawing.Size(146, 26);
+            this.raporToolStripMenuItem1.Text = "Raporla";
+            this.raporToolStripMenuItem1.Click += new System.EventHandler(this.raporToolStripMenuItem1_Click);
             // 
             // navbarBolum
             // 
             this.navbarBolum.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.bolumDuzenle});
+            this.bolumDuzenle,
+            this.raporlaToolStripMenuItem4});
             this.navbarBolum.Name = "navbarBolum";
-            this.navbarBolum.Size = new System.Drawing.Size(180, 22);
+            this.navbarBolum.Size = new System.Drawing.Size(147, 26);
             this.navbarBolum.Text = "Bölüm";
             // 
             // bolumDuzenle
             // 
             this.bolumDuzenle.Name = "bolumDuzenle";
-            this.bolumDuzenle.Size = new System.Drawing.Size(180, 22);
+            this.bolumDuzenle.Size = new System.Drawing.Size(146, 26);
             this.bolumDuzenle.Text = "Düzenle";
             this.bolumDuzenle.Click += new System.EventHandler(this.ekleToolStripMenuItem6_Click);
+            // 
+            // raporlaToolStripMenuItem4
+            // 
+            this.raporlaToolStripMenuItem4.Name = "raporlaToolStripMenuItem4";
+            this.raporlaToolStripMenuItem4.Size = new System.Drawing.Size(146, 26);
+            this.raporlaToolStripMenuItem4.Text = "Raporla";
+            this.raporlaToolStripMenuItem4.Click += new System.EventHandler(this.raporlaToolStripMenuItem4_Click);
+            // 
+            // nvbrGenelRaporlar
+            // 
+            this.nvbrGenelRaporlar.Name = "nvbrGenelRaporlar";
+            this.nvbrGenelRaporlar.Size = new System.Drawing.Size(122, 24);
+            this.nvbrGenelRaporlar.Text = "Genel Raporlar";
+            this.nvbrGenelRaporlar.Click += new System.EventHandler(this.nvbrGenelRaporlar_Click);
             // 
             // nvbrCıkıs
             // 
             this.nvbrCıkıs.Name = "nvbrCıkıs";
-            this.nvbrCıkıs.Size = new System.Drawing.Size(44, 20);
+            this.nvbrCıkıs.Size = new System.Drawing.Size(53, 24);
             this.nvbrCıkıs.Text = "Çıkış";
             this.nvbrCıkıs.Click += new System.EventHandler(this.çıkışToolStripMenuItem_Click);
             // 
             // mainPanel
             // 
-            this.mainPanel.Location = new System.Drawing.Point(9, 26);
-            this.mainPanel.Margin = new System.Windows.Forms.Padding(2);
+            this.mainPanel.Location = new System.Drawing.Point(12, 32);
+            this.mainPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.mainPanel.Name = "mainPanel";
-            this.mainPanel.Size = new System.Drawing.Size(582, 330);
+            this.mainPanel.Size = new System.Drawing.Size(776, 406);
             this.mainPanel.TabIndex = 1;
             // 
-            // nvbrGenelRaporlar
+            // databaseToolStripMenuItem
             // 
-            this.nvbrGenelRaporlar.Name = "nvbrGenelRaporlar";
-            this.nvbrGenelRaporlar.Size = new System.Drawing.Size(96, 20);
-            this.nvbrGenelRaporlar.Text = "Genel Raporlar";
+            this.databaseToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.yedekleToolStripMenuItem,
+            this.geriYükleToolStripMenuItem});
+            this.databaseToolStripMenuItem.Name = "databaseToolStripMenuItem";
+            this.databaseToolStripMenuItem.Size = new System.Drawing.Size(86, 24);
+            this.databaseToolStripMenuItem.Text = "Database";
+            // 
+            // yedekleToolStripMenuItem
+            // 
+            this.yedekleToolStripMenuItem.Name = "yedekleToolStripMenuItem";
+            this.yedekleToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.yedekleToolStripMenuItem.Text = "Yedekle";
+            this.yedekleToolStripMenuItem.Click += new System.EventHandler(this.yedekleToolStripMenuItem_Click);
+            // 
+            // geriYükleToolStripMenuItem
+            // 
+            this.geriYükleToolStripMenuItem.Name = "geriYükleToolStripMenuItem";
+            this.geriYükleToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.geriYükleToolStripMenuItem.Text = "Geri Yükle";
+            this.geriYükleToolStripMenuItem.Click += new System.EventHandler(this.geriYükleToolStripMenuItem_Click);
             // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(600, 366);
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.mainPanel);
             this.Controls.Add(this.navBar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.MainMenuStrip = this.navBar;
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "C# Abonelik Sistemi";
@@ -275,6 +350,14 @@ namespace CAS
         private System.Windows.Forms.ToolStripMenuItem personelDuzenle;
         private System.Windows.Forms.ToolStripMenuItem bolumDuzenle;
         private System.Windows.Forms.ToolStripMenuItem nvbrGenelRaporlar;
+        private System.Windows.Forms.ToolStripMenuItem raporlaToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem raporlaToolStripMenuItem2;
+        private System.Windows.Forms.ToolStripMenuItem raporlaToolStripMenuItem3;
+        private System.Windows.Forms.ToolStripMenuItem raporToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem raporlaToolStripMenuItem4;
+        private System.Windows.Forms.ToolStripMenuItem databaseToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem yedekleToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem geriYükleToolStripMenuItem;
     }
 }
 

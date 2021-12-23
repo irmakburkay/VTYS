@@ -25,26 +25,29 @@ namespace CAS
             aboneAdıCombo.SelectedIndex = -1;
             aboneAdıCombo.Text = "";
             aboneAdıCombo.Items.Clear();
-            foreach (DataRow row in mssql.sqlTablo("select aboneID from abone").Rows)       //comboBox daki elemanları veritabanından çeken kod
+            //mssql.sqlTablo("select ltrim(str(aboneID))+' - '+ad+' '+soyad from abone")
+            //mssql.sqlTablo("select ltrim(str(icerikID))+' - '+icerikAdi from icerik")
+            foreach (DataRow row in mssql.sqlTablo("select ltrim(str(aboneID))+' - '+ad+' '+soyad from abone").Rows)       //comboBox daki elemanları veritabanından çeken kod
                 aboneAdıCombo.Items.Add(row.ItemArray[0].ToString());
             icerikAdıCombo.SelectedIndex = -1;
             icerikAdıCombo.Text = "";
             icerikAdıCombo.Items.Clear();
-            foreach (DataRow row in mssql.sqlTablo("select icerikID from icerik").Rows)     //comboBox daki elemanları veritabanından çeken kod
+            foreach (DataRow row in mssql.sqlTablo("select icerikAdi from icerik").Rows)     //comboBox daki elemanları veritabanından çeken kod
                 icerikAdıCombo.Items.Add(row.ItemArray[0].ToString());
             dataGridView1.DataSource = mssql.sqlTablo("select abonelikID as 'Abonelik Numarası'," +     //datagridview içini veritabanından dolduran kod
-                "aboneID as 'Abone Numarası'," +
-                "icerikID as 'İçerik Numarası'," +
+                "ltrim(str(abone.aboneID))+' - '+ad+' '+soyad as 'Abone'," +
+                "icerikAdi as 'İçerik Adı'," +
                 "baslangicTarih as 'Başlangıç Tarihi'," +
                 "bitisTarih as 'Bitiş Tarihi' " +
-                "from abonelik");
+                "from abonelik,icerik,abone " +
+                "where icerik.icerikID=abonelik.icerikID and abone.aboneID=abonelik.aboneID");
         }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)        //datagridview üzerinde bir satır seçildiğinde ilgili alanları satırdaki verilerle dolduran kod
         {
             abonelikID = dataGridView1.SelectedRows[0].Cells["Abonelik Numarası"].Value.ToString();
-            aboneAdıCombo.SelectedIndex = aboneAdıCombo.Items.IndexOf(dataGridView1.SelectedRows[0].Cells["Abone Numarası"].Value.ToString());
-            icerikAdıCombo.SelectedIndex = icerikAdıCombo.Items.IndexOf(dataGridView1.SelectedRows[0].Cells["İçerik Numarası"].Value.ToString());
+            aboneAdıCombo.SelectedIndex = aboneAdıCombo.Items.IndexOf(dataGridView1.SelectedRows[0].Cells["Abone"].Value.ToString());
+            icerikAdıCombo.SelectedIndex = icerikAdıCombo.Items.IndexOf(dataGridView1.SelectedRows[0].Cells["İçerik Adı"].Value.ToString());
             baslangıcDate.Value = DateTime.Parse(dataGridView1.SelectedRows[0].Cells["Başlangıç Tarihi"].Value.ToString());
             bitisDate.Value = DateTime.Parse(dataGridView1.SelectedRows[0].Cells["Bitiş Tarihi"].Value.ToString());
         }
@@ -60,7 +63,7 @@ namespace CAS
                 case 0:     //ekleme işlemi 
                     if (!(aboneAdıCombo.SelectedIndex == -1 || icerikAdıCombo.SelectedIndex == -1))     //eklenecek veriler boş bırakılmadıysa ekleme işlemi yap
                     {
-                        mssql.sqlIslem("insert into abonelik values('" +aboneAdıCombo.SelectedItem+ "','" + icerikAdıCombo.SelectedItem + "','"+baslangıcDate.Value.ToString("yyyy-MM-dd")+"','"+bitisDate.Value.ToString("yyyy-MM-dd")+"')");
+                        mssql.sqlIslem("insert into abonelik values('" + aboneAdıCombo.SelectedItem.ToString().Substring(0, aboneAdıCombo.SelectedItem.ToString().IndexOf(" ")) + "','" + mssql.sqlString("select icerikID from icerik where icerikAdi='" + icerikAdıCombo.SelectedItem + "'") + "','" + baslangıcDate.Value.ToString("yyyy-MM-dd") + "','" + bitisDate.Value.ToString("yyyy-MM-dd") + "')");
                         MessageBox.Show("Yeni Kayıt Başarıyla Eklendi!");
                     }
                     else
@@ -71,7 +74,7 @@ namespace CAS
                     {
                         if (mssql.sqlString("select count(*) from abonelik where abonelikID=" + abonelikID).Equals("1"))      //güncellenecek kayıt bulunuyorsa ilgili verilerle güncelleme yap
                         {
-                            mssql.sqlIslem("update abonelik set aboneID='" + aboneAdıCombo.SelectedItem + "', icerikID='" + icerikAdıCombo.SelectedItem + "', baslagicTarih='"+ baslangıcDate.Value.ToString("yyyy-MM-dd") + "',bitisTarih='"+ bitisDate.Value.ToString("yyyy-MM-dd") + "' where abonelikID=" + abonelikID);
+                            mssql.sqlIslem("update abonelik set aboneID='" + aboneAdıCombo.SelectedItem.ToString().Substring(0, aboneAdıCombo.SelectedItem.ToString().IndexOf(" ")) + "', icerikID='" + mssql.sqlString("select icerikID from icerik where icerikAdi='" + icerikAdıCombo.SelectedItem + "'") + "', baslangicTarih='"+ baslangıcDate.Value.ToString("yyyy-MM-dd") + "',bitisTarih='"+ bitisDate.Value.ToString("yyyy-MM-dd") + "' where abonelikID=" + abonelikID);
                             MessageBox.Show(abonelikID + " Numaralı Kayıt Başarıyla Güncellendi!");
                         }
                         else

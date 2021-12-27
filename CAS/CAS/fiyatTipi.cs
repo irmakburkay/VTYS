@@ -18,8 +18,8 @@ namespace CAS
             ekleRadio.Checked = false;
             silRadio.Checked = false;
             guncelleRadio.Checked = false;
-            tipAdıTxt.Text = "";
-            fiyatTxt.Text = "";
+            tipAdıTxt.Text = string.Empty;
+            fiyatTxt.Text = string.Empty;
             dataGridView1.DataSource = mssql.sqlTablo("select fiyatID as 'Fiyat Numarası',tip as 'Fiyat Tipi',ucret as 'Fiyat' from fiyat");        //datagridview içini veritabanından dolduran kod
         }
 
@@ -27,7 +27,7 @@ namespace CAS
         {
             fiyatID = dataGridView1.SelectedRows[0].Cells["Fiyat Numarası"].Value.ToString();
             tipAdıTxt.Text = dataGridView1.SelectedRows[0].Cells["Fiyat Tipi"].Value.ToString();
-            fiyatTxt.Text= dataGridView1.SelectedRows[0].Cells["Fiyat"].Value.ToString();
+            fiyatTxt.Text = dataGridView1.SelectedRows[0].Cells["Fiyat"].Value.ToString();
         }
 
         private void turKaydetBtn_Click(object sender, EventArgs e)       //kaydet butonunda ekle,güncelle,sil işlemleri
@@ -41,7 +41,7 @@ namespace CAS
                 case 0:     //ekleme işlemi 
                     if (!(tipAdıTxt.Text == "" || fiyatTxt.Text == ""))     //eklenecek veriler boş bırakılmadıysa ekleme işlemi yap
                     {
-                        mssql.sqlIslem("insert into fiyat values('"+tipAdıTxt.Text+"','"+fiyatTxt.Text.Replace(',','.') +"')");
+                        mssql.sqlIslem("insert into fiyat values('" + tipAdıTxt.Text + "','" + fiyatTxt.Text.Replace(',', '.') + "')");
                         MessageBox.Show("Yeni Kayıt Başarıyla Eklendi!");
                     }
                     else

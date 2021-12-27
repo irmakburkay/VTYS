@@ -44,11 +44,10 @@
             // 
             // turKaydetBtn
             // 
-            this.turKaydetBtn.Location = new System.Drawing.Point(8, 23);
-            this.turKaydetBtn.Margin = new System.Windows.Forms.Padding(4);
+            this.turKaydetBtn.Location = new System.Drawing.Point(6, 19);
             this.turKaydetBtn.Name = "turKaydetBtn";
-            this.turKaydetBtn.Size = new System.Drawing.Size(117, 41);
-            this.turKaydetBtn.TabIndex = 8;
+            this.turKaydetBtn.Size = new System.Drawing.Size(88, 33);
+            this.turKaydetBtn.TabIndex = 2;
             this.turKaydetBtn.Text = "Kaydet";
             this.turKaydetBtn.UseVisualStyleBackColor = true;
             this.turKaydetBtn.Click += new System.EventHandler(this.turKaydetBtn_Click);
@@ -56,39 +55,36 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(239, 18);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(179, 15);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(65, 17);
+            this.label2.Size = new System.Drawing.Size(49, 13);
             this.label2.TabIndex = 7;
             this.label2.Text = "Fiyat Tipi";
             // 
             // turBaslıkTxt
             // 
-            this.turBaslıkTxt.Location = new System.Drawing.Point(91, 15);
-            this.turBaslıkTxt.Margin = new System.Windows.Forms.Padding(4);
+            this.turBaslıkTxt.Location = new System.Drawing.Point(68, 12);
             this.turBaslıkTxt.Name = "turBaslıkTxt";
-            this.turBaslıkTxt.Size = new System.Drawing.Size(132, 22);
-            this.turBaslıkTxt.TabIndex = 6;
+            this.turBaslıkTxt.Size = new System.Drawing.Size(100, 20);
+            this.turBaslıkTxt.TabIndex = 0;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(8, 18);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(6, 15);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(75, 17);
+            this.label1.Size = new System.Drawing.Size(56, 13);
             this.label1.TabIndex = 5;
             this.label1.Text = "Tür Başlığı";
             // 
             // fiyatCombo
             // 
+            this.fiyatCombo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.fiyatCombo.FormattingEnabled = true;
-            this.fiyatCombo.Location = new System.Drawing.Point(312, 14);
-            this.fiyatCombo.Margin = new System.Windows.Forms.Padding(4);
+            this.fiyatCombo.Location = new System.Drawing.Point(234, 11);
             this.fiyatCombo.Name = "fiyatCombo";
-            this.fiyatCombo.Size = new System.Drawing.Size(160, 24);
-            this.fiyatCombo.TabIndex = 9;
+            this.fiyatCombo.Size = new System.Drawing.Size(121, 21);
+            this.fiyatCombo.TabIndex = 1;
             // 
             // dataGridView1
             // 
@@ -96,14 +92,13 @@
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCellsExceptHeaders;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 162);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
+            this.dataGridView1.Location = new System.Drawing.Point(9, 132);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(461, 161);
+            this.dataGridView1.Size = new System.Drawing.Size(346, 131);
             this.dataGridView1.TabIndex = 25;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
@@ -113,21 +108,18 @@
             this.groupBox1.Controls.Add(this.silRadio);
             this.groupBox1.Controls.Add(this.ekleRadio);
             this.groupBox1.Controls.Add(this.turKaydetBtn);
-            this.groupBox1.Location = new System.Drawing.Point(236, 47);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.groupBox1.Location = new System.Drawing.Point(177, 38);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox1.Size = new System.Drawing.Size(237, 108);
+            this.groupBox1.Size = new System.Drawing.Size(178, 88);
             this.groupBox1.TabIndex = 26;
             this.groupBox1.TabStop = false;
             // 
             // guncelleRadio
             // 
             this.guncelleRadio.AutoSize = true;
-            this.guncelleRadio.Location = new System.Drawing.Point(133, 71);
-            this.guncelleRadio.Margin = new System.Windows.Forms.Padding(4);
+            this.guncelleRadio.Location = new System.Drawing.Point(100, 58);
             this.guncelleRadio.Name = "guncelleRadio";
-            this.guncelleRadio.Size = new System.Drawing.Size(85, 21);
+            this.guncelleRadio.Size = new System.Drawing.Size(67, 17);
             this.guncelleRadio.TabIndex = 22;
             this.guncelleRadio.TabStop = true;
             this.guncelleRadio.Text = "Güncelle";
@@ -136,10 +128,9 @@
             // silRadio
             // 
             this.silRadio.AutoSize = true;
-            this.silRadio.Location = new System.Drawing.Point(133, 43);
-            this.silRadio.Margin = new System.Windows.Forms.Padding(4);
+            this.silRadio.Location = new System.Drawing.Point(100, 35);
             this.silRadio.Name = "silRadio";
-            this.silRadio.Size = new System.Drawing.Size(44, 21);
+            this.silRadio.Size = new System.Drawing.Size(36, 17);
             this.silRadio.TabIndex = 23;
             this.silRadio.TabStop = true;
             this.silRadio.Text = "Sil";
@@ -148,10 +139,9 @@
             // ekleRadio
             // 
             this.ekleRadio.AutoSize = true;
-            this.ekleRadio.Location = new System.Drawing.Point(133, 15);
-            this.ekleRadio.Margin = new System.Windows.Forms.Padding(4);
+            this.ekleRadio.Location = new System.Drawing.Point(100, 12);
             this.ekleRadio.Name = "ekleRadio";
-            this.ekleRadio.Size = new System.Drawing.Size(56, 21);
+            this.ekleRadio.Size = new System.Drawing.Size(46, 17);
             this.ekleRadio.TabIndex = 24;
             this.ekleRadio.TabStop = true;
             this.ekleRadio.Text = "Ekle";
@@ -159,9 +149,9 @@
             // 
             // tur
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(489, 338);
+            this.ClientSize = new System.Drawing.Size(367, 275);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.fiyatCombo);
@@ -169,7 +159,6 @@
             this.Controls.Add(this.turBaslıkTxt);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "tur";
             this.Text = "turEkle";
             this.Load += new System.EventHandler(this.turEkle_Load);

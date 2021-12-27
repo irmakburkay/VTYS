@@ -11,13 +11,74 @@ using System.Windows.Forms;
 namespace CAS
 {
     public partial class MainForm : Form
-    { 
+    {
 
         public MainForm()
         {
             InitializeComponent();
         }
 
+        public void yetki()
+        {
+            kullaniciGiris kgs = Application.OpenForms["kullaniciGiris"] as kullaniciGiris;
+            string bolum = string.Empty;
+            aboneDuzenle.Enabled = false;
+            abonelikDuzenle.Enabled = false;
+            dergiDuzenle.Enabled = false;
+            bolumDuzenle.Enabled = false;
+            dergiDuzenle.Enabled = false;
+            fiyatDuzenle.Enabled = false;
+            personelDuzenle.Enabled = false;
+            turDuzenle.Enabled = false;
+            yedekleToolStripMenuItem.Enabled = false;
+            geriYükleToolStripMenuItem.Enabled = false;
+            int check = -1;
+            if (kgs.blm == "1") check = 0;
+            if (kgs.blm == "2") check = 1;
+            if (kgs.blm == "3") check = 2;
+            if (kgs.blm == "4") check = 3;
+            switch (check)
+            {
+                case 0:
+                    aboneDuzenle.Enabled = true;
+                    abonelikDuzenle.Enabled = true;
+                    dergiDuzenle.Enabled = true;
+                    bolumDuzenle.Enabled = true;
+                    dergiDuzenle.Enabled = true;
+                    fiyatDuzenle.Enabled = true;
+                    personelDuzenle.Enabled = true;
+                    turDuzenle.Enabled = true;
+                    yedekleToolStripMenuItem.Enabled = true;
+                    geriYükleToolStripMenuItem.Enabled = true;
+                    break;
+                case 1:
+                    aboneDuzenle.Enabled = true;
+                    abonelikDuzenle.Enabled = true;
+                    dergiDuzenle.Enabled = true;
+                    dergiDuzenle.Enabled = true;
+                    fiyatDuzenle.Enabled = true;
+                    turDuzenle.Enabled = true;
+                    break;
+                case 2:
+                    aboneDuzenle.Enabled = true;
+                    abonelikDuzenle.Enabled = true;
+                    dergiRapor.Enabled = false;
+                    turRapor.Enabled = false;
+                    fiyatRapor.Enabled = false;
+                    personelRapor.Enabled = false;
+                    bolumRapor.Enabled = false;
+                    break;
+                case 3:
+                    personelDuzenle.Enabled = false;
+                    bolumDuzenle.Enabled = false;
+                    personelRapor.Enabled = false;
+                    bolumRapor.Enabled = false;
+                    dergiRapor.Enabled = false;
+                    turRapor.Enabled = false;
+                    fiyatRapor.Enabled = false;
+                    break;
+            }
+        }
         public void baslangic()
         {
             MainForm mf = Application.OpenForms["MainForm"] as MainForm;
@@ -34,7 +95,8 @@ namespace CAS
 
         public void MainForm_Load(object sender, EventArgs e)
         {
-            baslangic();
+            yetki();
+            // baslangic();
         }
 
         private void ekleToolStripMenuItem_Click(object sender, EventArgs e)
@@ -46,7 +108,10 @@ namespace CAS
 
         private void çıkışToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            baslangic();
+            kullaniciGiris kg = Application.OpenForms["kullaniciGiris"] as kullaniciGiris;
+            kg.Close();
+            fk.nav(kg);
+            this.CenterToScreen();
         }
 
         private void ekleToolStripMenuItem1_Click(object sender, EventArgs e)
@@ -150,7 +215,7 @@ namespace CAS
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Yedekleme İşlemi Tamamlanamadı!\n"+ex.Message);
+                MessageBox.Show("Yedekleme İşlemi Tamamlanamadı!\n" + ex.Message);
                 throw;
             }
         }
@@ -160,7 +225,7 @@ namespace CAS
             msSQL ms = new msSQL("master");
             try
             {
-                ms.sqlIslem("USE [master] ALTER DATABASE[JAS] SET SINGLE_USER WITH ROLLBACK IMMEDIATE RESTORE DATABASE[JAS] FROM  DISK = N'D:\\JAS.bak' WITH  FILE = 8, NOUNLOAD, REPLACE, STATS = 5 ALTER DATABASE[JAS] SET MULTI_USER"); 
+                ms.sqlIslem("USE [master] ALTER DATABASE[JAS] SET SINGLE_USER WITH ROLLBACK IMMEDIATE RESTORE DATABASE[JAS] FROM  DISK = N'D:\\JAS.bak' WITH  FILE = 8, NOUNLOAD, REPLACE, STATS = 5 ALTER DATABASE[JAS] SET MULTI_USER");
                 MessageBox.Show("Geri Yükleme Başarıyla Tamamlandı!");
             }
             catch (Exception ex)
@@ -175,6 +240,11 @@ namespace CAS
             genelRapor genelRapor = new genelRapor();
             fk.nav(genelRapor);
             this.CenterToScreen();
+        }
+
+        private void MainForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

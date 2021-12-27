@@ -17,7 +17,7 @@ namespace CAS
         public SqlDataAdapter adapter;                      //tablo çekmek için aracı nesne
 
 
-        public msSQL(string server="JAS")
+        public msSQL(string server = "JAS")
         {
             connection = new SqlConnection("Server=localhost;Database=" + server + ";Trusted_Connection=True;");
             command.Connection = connection;                //command nesnesinin bağlantısını connection olarak atıyor (komutların üzerinde çalışacağı veritabanını belirliyor)

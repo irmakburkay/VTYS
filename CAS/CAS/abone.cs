@@ -19,7 +19,7 @@ namespace CAS
         }
         private void abone_Load(object sender, EventArgs e)
         {
-            aboneTelTxt.MaxLength = 11;
+            aboneTelTxt.MaxLength = 10;
             aboneID = "0";                                       //id varsayılan olarak 0 
             ekleRadio.Checked = false;
             silRadio.Checked = false;
@@ -45,7 +45,7 @@ namespace CAS
             switch (check)
             {
                 case 0:     //ekleme işlemi 
-                    if (!(aboneAdıTxt.Text==""||aboneSoyadTxt.Text==""|| aboneTelTxt.Text == ""|| aboneMailTxt.Text == ""|| aboneAdresTxt.Text == ""))     //eklenecek veriler boş bırakılmadıysa ekleme işlemi yap
+                    if (!(aboneAdıTxt.Text == "" || aboneSoyadTxt.Text == "" || aboneTelTxt.Text == "" || aboneMailTxt.Text == "" || aboneAdresTxt.Text == "" &&aboneTelTxt.Text.Length==11))     //eklenecek veriler boş bırakılmadıysa ekleme işlemi yap
                     {
                         mssql.sqlIslem("insert into abone values('" + aboneAdıTxt.Text + "','" + aboneSoyadTxt.Text + "','" + aboneTelTxt.Text + "','" + aboneAdresTxt.Text + "','" + aboneDate.Value.ToString("yyyy-MM-dd") + "' , '" + aboneMailTxt.Text + "')");
                         MessageBox.Show("Yeni Kayıt Başarıyla Eklendi!");
@@ -56,9 +56,9 @@ namespace CAS
                 case 1:     //güncelleme işlemi
                     if (aboneID != "0")
                     {
-                        if (mssql.sqlString("select count(*) from personel where aboneID=" + aboneID).Equals("1"))      //güncellenecek kayıt bulunuyorsa ilgili verilerle güncelleme yap
+                        if (mssql.sqlString("select count(*) from abone where aboneID=" + aboneID).Equals("1"))      //güncellenecek kayıt bulunuyorsa ilgili verilerle güncelleme yap
                         {
-                            mssql.sqlIslem("update personel set ad='" + aboneAdıTxt + "', soyad='" + aboneSoyadTxt.Text + "', tel='" + aboneTelTxt.Text + "' , adres='" + aboneAdresTxt.Text + "' , kayitTarih='" + aboneDate.Value.ToString("yyyy-MM-dd") + "' , eMail='" + aboneMailTxt.Text + "' where aboneID=" + aboneID);
+                            mssql.sqlIslem("update abone set ad='" + aboneAdıTxt.Text + "', soyad='" + aboneSoyadTxt.Text + "', tel='" + aboneTelTxt.Text + "' , adres='" + aboneAdresTxt.Text + "' , kayitTarih='" + aboneDate.Value.ToString("yyyy-MM-dd") + "' , eMail='" + aboneMailTxt.Text + "' where aboneID=" + aboneID);
                             MessageBox.Show(aboneID + " Numaralı Kayıt Başarıyla Güncellendi!");
                         }
                         else
@@ -70,7 +70,7 @@ namespace CAS
                 case 2:     //silme işlemi
                     if (aboneID != "0")
                     {
-                        if (mssql.sqlString("select count(*) from personel where aboneID=" + aboneID).Equals("1"))        //ilgili kayıt varsa silme işlemi yap
+                        if (mssql.sqlString("select count(*) from abone where aboneID=" + aboneID).Equals("1"))        //ilgili kayıt varsa silme işlemi yap
                         {
                             mssql.sqlIslem("delete abone where aboneID=" + aboneID);
                             MessageBox.Show(aboneID + " Numaralı Kayıt Başarıyla Silindi!");
@@ -91,13 +91,13 @@ namespace CAS
 
         private void dataGridView1_Click(object sender, EventArgs e)
         {
-            aboneID= dataGridView1.SelectedRows[0].Cells["Abone Numarası"].Value.ToString();
-            aboneAdıTxt.Text= dataGridView1.SelectedRows[0].Cells["Abone Adı"].Value.ToString();
-            aboneSoyadTxt.Text= dataGridView1.SelectedRows[0].Cells["Abone Soyadı"].Value.ToString();
-            aboneTelTxt.Text= dataGridView1.SelectedRows[0].Cells["Telefon"].Value.ToString();
-            aboneAdresTxt.Text= dataGridView1.SelectedRows[0].Cells["Adres"].Value.ToString();
+            aboneID = dataGridView1.SelectedRows[0].Cells["Abone Numarası"].Value.ToString();
+            aboneAdıTxt.Text = dataGridView1.SelectedRows[0].Cells["Abone Adı"].Value.ToString();
+            aboneSoyadTxt.Text = dataGridView1.SelectedRows[0].Cells["Abone Soyadı"].Value.ToString();
+            aboneTelTxt.Text = dataGridView1.SelectedRows[0].Cells["Telefon"].Value.ToString();
+            aboneAdresTxt.Text = dataGridView1.SelectedRows[0].Cells["Adres"].Value.ToString();
             aboneDate.Value = DateTime.Parse(dataGridView1.SelectedRows[0].Cells["Kayıt Tarihi"].Value.ToString());
-            aboneMailTxt.Text= dataGridView1.SelectedRows[0].Cells["E-Mail"].Value.ToString();
+            aboneMailTxt.Text = dataGridView1.SelectedRows[0].Cells["E-Mail"].Value.ToString();
         }
 
         private void ekleRadio_Click(object sender, EventArgs e)

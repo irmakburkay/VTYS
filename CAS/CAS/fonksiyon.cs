@@ -23,7 +23,13 @@ namespace CAS
             main.Height = f.Height + 83;
             f.Show();
         }
+        public string kulAdi = string.Empty, kulSifre = string.Empty;
+        public void yetki(string a, string b)
+        {
+            kulAdi = a;
+            kulSifre = b;
+        }
 
     }
-    
+
 }

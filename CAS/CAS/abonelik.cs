@@ -74,7 +74,7 @@ namespace CAS
                     {
                         if (mssql.sqlString("select count(*) from abonelik where abonelikID=" + abonelikID).Equals("1"))      //güncellenecek kayıt bulunuyorsa ilgili verilerle güncelleme yap
                         {
-                            mssql.sqlIslem("update abonelik set aboneID='" + aboneAdıCombo.SelectedItem.ToString().Substring(0, aboneAdıCombo.SelectedItem.ToString().IndexOf(" ")) + "', icerikID='" + mssql.sqlString("select icerikID from icerik where icerikAdi='" + icerikAdıCombo.SelectedItem + "'") + "', baslangicTarih='"+ baslangıcDate.Value.ToString("yyyy-MM-dd") + "',bitisTarih='"+ bitisDate.Value.ToString("yyyy-MM-dd") + "' where abonelikID=" + abonelikID);
+                            mssql.sqlIslem("update abonelik set aboneID='" + aboneAdıCombo.SelectedItem.ToString().Substring(0, aboneAdıCombo.SelectedItem.ToString().IndexOf(" ")) + "', icerikID='" + mssql.sqlString("select icerikID from icerik where icerikAdi='" + icerikAdıCombo.SelectedItem + "'") + "', baslangicTarih='" + baslangıcDate.Value.ToString("yyyy-MM-dd") + "',bitisTarih='" + bitisDate.Value.ToString("yyyy-MM-dd") + "' where abonelikID=" + abonelikID);
                             MessageBox.Show(abonelikID + " Numaralı Kayıt Başarıyla Güncellendi!");
                         }
                         else

@@ -81,7 +81,7 @@ namespace CAS
             this.aboneSoyadTxt.Location = new System.Drawing.Point(206, 26);
             this.aboneSoyadTxt.Name = "aboneSoyadTxt";
             this.aboneSoyadTxt.Size = new System.Drawing.Size(100, 20);
-            this.aboneSoyadTxt.TabIndex = 1;
+            this.aboneSoyadTxt.TabIndex = 2;
             // 
             // label2
             // 
@@ -97,7 +97,7 @@ namespace CAS
             this.aboneTelTxt.Location = new System.Drawing.Point(355, 26);
             this.aboneTelTxt.Name = "aboneTelTxt";
             this.aboneTelTxt.Size = new System.Drawing.Size(100, 20);
-            this.aboneTelTxt.TabIndex = 1;
+            this.aboneTelTxt.TabIndex = 3;
             this.aboneTelTxt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.aboneTelTxt_KeyPress);
             // 
             // label5
@@ -115,7 +115,7 @@ namespace CAS
             this.aboneAdresTxt.Multiline = true;
             this.aboneAdresTxt.Name = "aboneAdresTxt";
             this.aboneAdresTxt.Size = new System.Drawing.Size(249, 48);
-            this.aboneAdresTxt.TabIndex = 1;
+            this.aboneAdresTxt.TabIndex = 5;
             // 
             // label6
             // 
@@ -131,7 +131,7 @@ namespace CAS
             this.aboneDate.Location = new System.Drawing.Point(378, 55);
             this.aboneDate.Name = "aboneDate";
             this.aboneDate.Size = new System.Drawing.Size(135, 20);
-            this.aboneDate.TabIndex = 2;
+            this.aboneDate.TabIndex = 6;
             // 
             // label7
             // 
@@ -147,14 +147,14 @@ namespace CAS
             this.aboneMailTxt.Location = new System.Drawing.Point(506, 26);
             this.aboneMailTxt.Name = "aboneMailTxt";
             this.aboneMailTxt.Size = new System.Drawing.Size(213, 20);
-            this.aboneMailTxt.TabIndex = 1;
+            this.aboneMailTxt.TabIndex = 4;
             // 
             // aboneKytButon
             // 
             this.aboneKytButon.Location = new System.Drawing.Point(6, 11);
             this.aboneKytButon.Name = "aboneKytButon";
             this.aboneKytButon.Size = new System.Drawing.Size(108, 40);
-            this.aboneKytButon.TabIndex = 3;
+            this.aboneKytButon.TabIndex = 7;
             this.aboneKytButon.Text = "Kaydet";
             this.aboneKytButon.UseVisualStyleBackColor = true;
             this.aboneKytButon.Click += new System.EventHandler(this.aboneKytButon_Click);

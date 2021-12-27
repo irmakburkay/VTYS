@@ -56,9 +56,10 @@
             // 
             // aboneKytButon
             // 
-            this.aboneKytButon.Location = new System.Drawing.Point(6, 19);
+            this.aboneKytButon.Location = new System.Drawing.Point(8, 23);
+            this.aboneKytButon.Margin = new System.Windows.Forms.Padding(4);
             this.aboneKytButon.Name = "aboneKytButon";
-            this.aboneKytButon.Size = new System.Drawing.Size(99, 40);
+            this.aboneKytButon.Size = new System.Drawing.Size(132, 49);
             this.aboneKytButon.TabIndex = 8;
             this.aboneKytButon.Text = "Kaydet";
             this.aboneKytButon.UseVisualStyleBackColor = true;
@@ -66,124 +67,139 @@
             // 
             // personelMailTxt
             // 
-            this.personelMailTxt.Location = new System.Drawing.Point(349, 37);
+            this.personelMailTxt.Location = new System.Drawing.Point(465, 46);
+            this.personelMailTxt.Margin = new System.Windows.Forms.Padding(4);
             this.personelMailTxt.Name = "personelMailTxt";
-            this.personelMailTxt.Size = new System.Drawing.Size(213, 20);
+            this.personelMailTxt.Size = new System.Drawing.Size(283, 22);
             this.personelMailTxt.TabIndex = 6;
             // 
             // sifreTxt
             // 
-            this.sifreTxt.Location = new System.Drawing.Point(663, 11);
+            this.sifreTxt.Location = new System.Drawing.Point(502, 100);
+            this.sifreTxt.Margin = new System.Windows.Forms.Padding(4);
             this.sifreTxt.Name = "sifreTxt";
-            this.sifreTxt.Size = new System.Drawing.Size(100, 20);
+            this.sifreTxt.Size = new System.Drawing.Size(132, 22);
             this.sifreTxt.TabIndex = 4;
             // 
             // kullaiciAdıTxt
             // 
-            this.kullaiciAdıTxt.Location = new System.Drawing.Point(525, 11);
+            this.kullaiciAdıTxt.Location = new System.Drawing.Point(502, 75);
+            this.kullaiciAdıTxt.Margin = new System.Windows.Forms.Padding(4);
             this.kullaiciAdıTxt.Name = "kullaiciAdıTxt";
-            this.kullaiciAdıTxt.Size = new System.Drawing.Size(100, 20);
+            this.kullaiciAdıTxt.Size = new System.Drawing.Size(132, 22);
             this.kullaiciAdıTxt.TabIndex = 3;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(307, 40);
+            this.label7.Location = new System.Drawing.Point(409, 49);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(36, 13);
+            this.label7.Size = new System.Drawing.Size(47, 17);
             this.label7.TabIndex = 8;
             this.label7.Text = "E-Mail";
             // 
             // personelTelefonTxt
             // 
-            this.personelTelefonTxt.Location = new System.Drawing.Point(350, 11);
+            this.personelTelefonTxt.Location = new System.Drawing.Point(467, 14);
+            this.personelTelefonTxt.Margin = new System.Windows.Forms.Padding(4);
             this.personelTelefonTxt.Name = "personelTelefonTxt";
-            this.personelTelefonTxt.Size = new System.Drawing.Size(100, 20);
+            this.personelTelefonTxt.Size = new System.Drawing.Size(132, 22);
             this.personelTelefonTxt.TabIndex = 2;
             this.personelTelefonTxt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.personelTelefonTxt_KeyPress);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(629, 14);
+            this.label4.Location = new System.Drawing.Point(409, 103);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(28, 13);
+            this.label4.Size = new System.Drawing.Size(37, 17);
             this.label4.TabIndex = 10;
             this.label4.Text = "Şifre";
             // 
             // personelSoyadTxt
             // 
-            this.personelSoyadTxt.Location = new System.Drawing.Point(201, 11);
+            this.personelSoyadTxt.Location = new System.Drawing.Point(268, 14);
+            this.personelSoyadTxt.Margin = new System.Windows.Forms.Padding(4);
             this.personelSoyadTxt.Name = "personelSoyadTxt";
-            this.personelSoyadTxt.Size = new System.Drawing.Size(100, 20);
+            this.personelSoyadTxt.Size = new System.Drawing.Size(132, 22);
             this.personelSoyadTxt.TabIndex = 1;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(455, 14);
+            this.label3.Location = new System.Drawing.Point(409, 78);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(64, 13);
+            this.label3.Size = new System.Drawing.Size(84, 17);
             this.label3.TabIndex = 9;
             this.label3.Text = "Kullanıcı Adı";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(307, 14);
+            this.label2.Location = new System.Drawing.Point(409, 17);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(43, 13);
+            this.label2.Size = new System.Drawing.Size(56, 17);
             this.label2.TabIndex = 7;
             this.label2.Text = "Telefon";
             // 
             // soyadTxt
             // 
             this.soyadTxt.AutoSize = true;
-            this.soyadTxt.Location = new System.Drawing.Point(158, 14);
+            this.soyadTxt.Location = new System.Drawing.Point(211, 17);
+            this.soyadTxt.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.soyadTxt.Name = "soyadTxt";
-            this.soyadTxt.Size = new System.Drawing.Size(37, 13);
+            this.soyadTxt.Size = new System.Drawing.Size(48, 17);
             this.soyadTxt.TabIndex = 6;
             this.soyadTxt.Text = "Soyad";
             // 
             // personelAdresTxt
             // 
-            this.personelAdresTxt.Location = new System.Drawing.Point(52, 37);
+            this.personelAdresTxt.Location = new System.Drawing.Point(69, 46);
+            this.personelAdresTxt.Margin = new System.Windows.Forms.Padding(4);
             this.personelAdresTxt.Multiline = true;
             this.personelAdresTxt.Name = "personelAdresTxt";
-            this.personelAdresTxt.Size = new System.Drawing.Size(249, 55);
+            this.personelAdresTxt.Size = new System.Drawing.Size(331, 67);
             this.personelAdresTxt.TabIndex = 5;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(12, 40);
+            this.label5.Location = new System.Drawing.Point(16, 49);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(34, 13);
+            this.label5.Size = new System.Drawing.Size(45, 17);
             this.label5.TabIndex = 5;
             this.label5.Text = "Adres";
             // 
             // personelAdıTxt
             // 
-            this.personelAdıTxt.Location = new System.Drawing.Point(52, 11);
+            this.personelAdıTxt.Location = new System.Drawing.Point(69, 14);
+            this.personelAdıTxt.Margin = new System.Windows.Forms.Padding(4);
             this.personelAdıTxt.Name = "personelAdıTxt";
-            this.personelAdıTxt.Size = new System.Drawing.Size(100, 20);
+            this.personelAdıTxt.Size = new System.Drawing.Size(132, 22);
             this.personelAdıTxt.TabIndex = 0;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(26, 14);
+            this.label1.Location = new System.Drawing.Point(35, 17);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(20, 13);
+            this.label1.Size = new System.Drawing.Size(25, 17);
             this.label1.TabIndex = 4;
             this.label1.Text = "Ad";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(583, 40);
+            this.label8.Location = new System.Drawing.Point(622, 17);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(42, 13);
+            this.label8.Size = new System.Drawing.Size(55, 17);
             this.label8.TabIndex = 21;
             this.label8.Text = "Bölümü";
             // 
@@ -191,9 +207,10 @@
             // 
             this.bolumCombo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.bolumCombo.FormattingEnabled = true;
-            this.bolumCombo.Location = new System.Drawing.Point(631, 37);
+            this.bolumCombo.Location = new System.Drawing.Point(686, 14);
+            this.bolumCombo.Margin = new System.Windows.Forms.Padding(4);
             this.bolumCombo.Name = "bolumCombo";
-            this.bolumCombo.Size = new System.Drawing.Size(131, 21);
+            this.bolumCombo.Size = new System.Drawing.Size(173, 24);
             this.bolumCombo.TabIndex = 7;
             // 
             // groupBox1
@@ -202,18 +219,21 @@
             this.groupBox1.Controls.Add(this.silRadio);
             this.groupBox1.Controls.Add(this.ekleRadio);
             this.groupBox1.Controls.Add(this.aboneKytButon);
-            this.groupBox1.Location = new System.Drawing.Point(571, 64);
+            this.groupBox1.Location = new System.Drawing.Point(707, 78);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(192, 91);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBox1.Size = new System.Drawing.Size(256, 112);
             this.groupBox1.TabIndex = 23;
             this.groupBox1.TabStop = false;
             // 
             // guncelleRadio
             // 
             this.guncelleRadio.AutoSize = true;
-            this.guncelleRadio.Location = new System.Drawing.Point(111, 65);
+            this.guncelleRadio.Location = new System.Drawing.Point(148, 80);
+            this.guncelleRadio.Margin = new System.Windows.Forms.Padding(4);
             this.guncelleRadio.Name = "guncelleRadio";
-            this.guncelleRadio.Size = new System.Drawing.Size(67, 17);
+            this.guncelleRadio.Size = new System.Drawing.Size(85, 21);
             this.guncelleRadio.TabIndex = 21;
             this.guncelleRadio.TabStop = true;
             this.guncelleRadio.Text = "Güncelle";
@@ -223,9 +243,10 @@
             // silRadio
             // 
             this.silRadio.AutoSize = true;
-            this.silRadio.Location = new System.Drawing.Point(111, 42);
+            this.silRadio.Location = new System.Drawing.Point(148, 52);
+            this.silRadio.Margin = new System.Windows.Forms.Padding(4);
             this.silRadio.Name = "silRadio";
-            this.silRadio.Size = new System.Drawing.Size(36, 17);
+            this.silRadio.Size = new System.Drawing.Size(44, 21);
             this.silRadio.TabIndex = 21;
             this.silRadio.TabStop = true;
             this.silRadio.Text = "Sil";
@@ -234,9 +255,10 @@
             // ekleRadio
             // 
             this.ekleRadio.AutoSize = true;
-            this.ekleRadio.Location = new System.Drawing.Point(111, 19);
+            this.ekleRadio.Location = new System.Drawing.Point(148, 23);
+            this.ekleRadio.Margin = new System.Windows.Forms.Padding(4);
             this.ekleRadio.Name = "ekleRadio";
-            this.ekleRadio.Size = new System.Drawing.Size(46, 17);
+            this.ekleRadio.Size = new System.Drawing.Size(56, 21);
             this.ekleRadio.TabIndex = 21;
             this.ekleRadio.TabStop = true;
             this.ekleRadio.Text = "Ekle";
@@ -249,20 +271,22 @@
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCellsExceptHeaders;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(29, 161);
+            this.dataGridView1.Location = new System.Drawing.Point(13, 198);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersVisible = false;
+            this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(733, 233);
+            this.dataGridView1.Size = new System.Drawing.Size(950, 271);
             this.dataGridView1.TabIndex = 24;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // personel
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(792, 406);
+            this.ClientSize = new System.Drawing.Size(976, 482);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.bolumCombo);
@@ -282,6 +306,7 @@
             this.Controls.Add(this.personelAdıTxt);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "personel";
             this.Text = "personelEkle";
             this.Load += new System.EventHandler(this.personelEkle_Load);

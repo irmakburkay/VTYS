@@ -16,6 +16,18 @@ namespace CAS
         {
             InitializeComponent();
         }
+
+        public TextBox kullaniciAdi()
+        {
+            return kullaniciText;
+        }
+
+        public TextBox sifre()
+        {
+            return sifreText;
+        }
+
+
         public string kulAdi { get; set; }
         public string kulSifre { get; set; }
         public string blm { get; set; }
@@ -45,6 +57,8 @@ namespace CAS
 
         private void kullaniciGiris_Load(object sender, EventArgs e)
         {
+            //kullaniciText.Text = string.Empty;
+            //sifreText.Text = string.Empty;
         }
 
         private void exit_Click(object sender, EventArgs e)

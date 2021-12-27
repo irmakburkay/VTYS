@@ -41,7 +41,10 @@ namespace CAS
                         try
                         {
                             Microsoft.Office.Interop.Excel.Range myRange = (Microsoft.Office.Interop.Excel.Range)sheet1.Cells[StartRow + i, StartCol + j];
-                            myRange.Value2 = dataGridView[j, i].Value == null ? "" : dataGridView[j, i].Value;
+                            if (dataGridView[j, i].ValueType == typeof(DateTime))
+                                myRange.Value2 = dataGridView[j, i].Value == null ? "" : DateTime.Parse(dataGridView[j, i].Value.ToString()).ToString("dd.MM.yyyy");
+                            else
+                                myRange.Value2 = dataGridView[j, i].Value == null ? "" : dataGridView[j, i].Value;
                         }
                         catch
                         {

@@ -16,19 +16,25 @@ namespace CAS
         {
             InitializeComponent();
         }
-
+        public string kulAdi { get; set; }
+        public string kulSifre { get; set; }
+        public string blm { get; set; }
         private void girisButon_Click(object sender, EventArgs e)
         {
-            if(mssql.sqlString("select count(*) from personel where kullaniciAdi='"+kullaniciText.Text+"'").Equals("1"))
+            if (mssql.sqlString("select count(*) from personel where kullaniciAdi='" + kullaniciText.Text + "'").Equals("1"))
             {
-                if(mssql.sqlString("select count(*) from personel where kullaniciAdi='" + kullaniciText.Text + "' and sifre='" + sifreText.Text + "'").Equals("1"))
+                if (mssql.sqlString("select count(*) from personel where kullaniciAdi='" + kullaniciText.Text + "' and sifre='" + sifreText.Text + "'").Equals("1"))
                 {
                     MessageBox.Show("Kullanıcı Girişi Başarılı!");
-                    MainForm mf = Application.OpenForms["MainForm"] as MainForm;
-                    mf.Show();
-                    mf.Opacity = 100;
+                    MainForm mf = new MainForm();
                     mf.navBar.Enabled = true;
-                    this.Close();
+                    kulAdi = kullaniciText.Text; //kullanıcı giriş formundan kullanıcı adı şifreyi main forma gönderen kod
+                    kulSifre = sifreText.Text;
+                    string a = string.Empty;
+                    a = mssql.sqlString("select bolumID from personel where kullaniciAdi='" + kullaniciText.Text + "' and sifre='" + sifreText.Text + "'");
+                    blm = mssql.sqlString("select yetkiTipi from bolum where bolumID='" + a + "'");
+                    this.Hide();
+                    mf.Show();
                 }
                 else
                     MessageBox.Show("Kullanıcı Şifre Yanlış!");
@@ -39,6 +45,11 @@ namespace CAS
 
         private void kullaniciGiris_Load(object sender, EventArgs e)
         {
+        }
+
+        private void exit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

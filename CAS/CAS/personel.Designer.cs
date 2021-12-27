@@ -59,7 +59,7 @@
             this.aboneKytButon.Location = new System.Drawing.Point(6, 19);
             this.aboneKytButon.Name = "aboneKytButon";
             this.aboneKytButon.Size = new System.Drawing.Size(99, 40);
-            this.aboneKytButon.TabIndex = 20;
+            this.aboneKytButon.TabIndex = 8;
             this.aboneKytButon.Text = "Kaydet";
             this.aboneKytButon.UseVisualStyleBackColor = true;
             this.aboneKytButon.Click += new System.EventHandler(this.personelKytButon_Click);
@@ -69,21 +69,21 @@
             this.personelMailTxt.Location = new System.Drawing.Point(349, 37);
             this.personelMailTxt.Name = "personelMailTxt";
             this.personelMailTxt.Size = new System.Drawing.Size(213, 20);
-            this.personelMailTxt.TabIndex = 17;
+            this.personelMailTxt.TabIndex = 6;
             // 
             // sifreTxt
             // 
             this.sifreTxt.Location = new System.Drawing.Point(663, 11);
             this.sifreTxt.Name = "sifreTxt";
             this.sifreTxt.Size = new System.Drawing.Size(100, 20);
-            this.sifreTxt.TabIndex = 16;
+            this.sifreTxt.TabIndex = 4;
             // 
             // kullaiciAdıTxt
             // 
             this.kullaiciAdıTxt.Location = new System.Drawing.Point(525, 11);
             this.kullaiciAdıTxt.Name = "kullaiciAdıTxt";
             this.kullaiciAdıTxt.Size = new System.Drawing.Size(100, 20);
-            this.kullaiciAdıTxt.TabIndex = 15;
+            this.kullaiciAdıTxt.TabIndex = 3;
             // 
             // label7
             // 
@@ -99,7 +99,7 @@
             this.personelTelefonTxt.Location = new System.Drawing.Point(350, 11);
             this.personelTelefonTxt.Name = "personelTelefonTxt";
             this.personelTelefonTxt.Size = new System.Drawing.Size(100, 20);
-            this.personelTelefonTxt.TabIndex = 14;
+            this.personelTelefonTxt.TabIndex = 2;
             this.personelTelefonTxt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.personelTelefonTxt_KeyPress);
             // 
             // label4
@@ -116,7 +116,7 @@
             this.personelSoyadTxt.Location = new System.Drawing.Point(201, 11);
             this.personelSoyadTxt.Name = "personelSoyadTxt";
             this.personelSoyadTxt.Size = new System.Drawing.Size(100, 20);
-            this.personelSoyadTxt.TabIndex = 13;
+            this.personelSoyadTxt.TabIndex = 1;
             // 
             // label3
             // 
@@ -151,7 +151,7 @@
             this.personelAdresTxt.Multiline = true;
             this.personelAdresTxt.Name = "personelAdresTxt";
             this.personelAdresTxt.Size = new System.Drawing.Size(249, 55);
-            this.personelAdresTxt.TabIndex = 12;
+            this.personelAdresTxt.TabIndex = 5;
             // 
             // label5
             // 
@@ -167,7 +167,7 @@
             this.personelAdıTxt.Location = new System.Drawing.Point(52, 11);
             this.personelAdıTxt.Name = "personelAdıTxt";
             this.personelAdıTxt.Size = new System.Drawing.Size(100, 20);
-            this.personelAdıTxt.TabIndex = 18;
+            this.personelAdıTxt.TabIndex = 0;
             // 
             // label1
             // 
@@ -189,11 +189,12 @@
             // 
             // bolumCombo
             // 
+            this.bolumCombo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.bolumCombo.FormattingEnabled = true;
             this.bolumCombo.Location = new System.Drawing.Point(631, 37);
             this.bolumCombo.Name = "bolumCombo";
             this.bolumCombo.Size = new System.Drawing.Size(131, 21);
-            this.bolumCombo.TabIndex = 22;
+            this.bolumCombo.TabIndex = 7;
             // 
             // groupBox1
             // 

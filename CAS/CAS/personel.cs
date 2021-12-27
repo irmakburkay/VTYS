@@ -20,7 +20,7 @@ namespace CAS
 
         private void personelEkle_Load(object sender, EventArgs e)
         {
-            personelTelefonTxt.MaxLength = 11;
+            personelTelefonTxt.MaxLength = 10;
             personelID = "0";          //id varsayılan olarak 0 
             ekleRadio.Checked = false;
             silRadio.Checked = false;
@@ -53,9 +53,9 @@ namespace CAS
             switch (check)
             {
                 case 0:     //ekleme işlemi 
-                    if (!(bolumCombo.SelectedIndex == -1)||personelAdresTxt.Text!=""|| personelAdıTxt.Text != ""|| kullaiciAdıTxt.Text != ""|| personelSoyadTxt.Text != ""|| personelTelefonTxt.Text != ""|| sifreTxt.Text != ""|| personelMailTxt.Text != "")     //eklenecek veriler boş bırakılmadıysa ekleme işlemi yap
+                    if (!(bolumCombo.SelectedIndex == -1) || personelAdresTxt.Text != "" || personelAdıTxt.Text != "" || kullaiciAdıTxt.Text != "" || personelSoyadTxt.Text != "" || personelTelefonTxt.Text != "" || sifreTxt.Text != "" || personelMailTxt.Text != "" && personelTelefonTxt.Text.Length==11)     //eklenecek veriler boş bırakılmadıysa ekleme işlemi yap
                     {
-                        mssql.sqlIslem("insert into personel values('" + mssql.sqlString("select bolumID from bolum where bolumAdi = '"+ bolumCombo.SelectedItem + "'") + "','" + personelAdıTxt.Text + "','" + personelSoyadTxt.Text + "','" + personelTelefonTxt .Text+ "','" + kullaiciAdıTxt.Text +"' , '" +sifreTxt.Text + "', '" + personelAdresTxt.Text + "', '" + personelMailTxt.Text + "')");
+                        mssql.sqlIslem("insert into personel values('" + mssql.sqlString("select bolumID from bolum where bolumAdi = '" + bolumCombo.SelectedItem + "'") + "','" + personelAdıTxt.Text + "','" + personelSoyadTxt.Text + "','" + personelTelefonTxt.Text + "','" + kullaiciAdıTxt.Text + "' , '" + sifreTxt.Text + "', '" + personelAdresTxt.Text + "', '" + personelMailTxt.Text + "')");
                         MessageBox.Show("Yeni Kayıt Başarıyla Eklendi!");
                     }
                     else
@@ -66,7 +66,7 @@ namespace CAS
                     {
                         if (mssql.sqlString("select count(*) from personel where personelID=" + personelID).Equals("1"))      //güncellenecek kayıt bulunuyorsa ilgili verilerle güncelleme yap
                         {
-                            mssql.sqlIslem("update personel set bolumID='" + mssql.sqlString("select bolumID from bolum where bolumAdi = '" + bolumCombo.SelectedItem + "'") + "', ad='" + personelAdıTxt.Text + "', soyad='" + personelSoyadTxt.Text + "' , tel='" + personelTelefonTxt.Text + "' , kullaniciAdi='" + kullaiciAdıTxt.Text + "' , sifre='" + sifreTxt.Text + "' , adres='" + personelAdresTxt.Text + "' , eMail='" + personelMailTxt.Text+"'where personelID="+personelID);
+                            mssql.sqlIslem("update personel set bolumID='" + mssql.sqlString("select bolumID from bolum where bolumAdi = '" + bolumCombo.SelectedItem + "'") + "', ad='" + personelAdıTxt.Text + "', soyad='" + personelSoyadTxt.Text + "' , tel='" + personelTelefonTxt.Text + "' , kullaniciAdi='" + kullaiciAdıTxt.Text + "' , sifre='" + sifreTxt.Text + "' , adres='" + personelAdresTxt.Text + "' , eMail='" + personelMailTxt.Text + "'where personelID=" + personelID);
                             MessageBox.Show(personelID + " Numaralı Kayıt Başarıyla Güncellendi!");
                         }
                         else
@@ -99,15 +99,15 @@ namespace CAS
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            personelAdıTxt.Text= dataGridView1.SelectedRows[0].Cells["Personel Adı"].Value.ToString();
-            personelSoyadTxt.Text= dataGridView1.SelectedRows[0].Cells["Personel Soyadı"].Value.ToString();
-            personelTelefonTxt.Text= dataGridView1.SelectedRows[0].Cells["Telefon"].Value.ToString();
-            kullaiciAdıTxt.Text= dataGridView1.SelectedRows[0].Cells["KUllanıcı Adı"].Value.ToString();
-            sifreTxt.Text= dataGridView1.SelectedRows[0].Cells["Şifre"].Value.ToString();
-            personelAdresTxt.Text= dataGridView1.SelectedRows[0].Cells["Adres"].Value.ToString();
-            personelMailTxt.Text= dataGridView1.SelectedRows[0].Cells["E-Mail"].Value.ToString();
+            personelAdıTxt.Text = dataGridView1.SelectedRows[0].Cells["Personel Adı"].Value.ToString();
+            personelSoyadTxt.Text = dataGridView1.SelectedRows[0].Cells["Personel Soyadı"].Value.ToString();
+            personelTelefonTxt.Text = dataGridView1.SelectedRows[0].Cells["Telefon"].Value.ToString();
+            kullaiciAdıTxt.Text = dataGridView1.SelectedRows[0].Cells["KUllanıcı Adı"].Value.ToString();
+            sifreTxt.Text = dataGridView1.SelectedRows[0].Cells["Şifre"].Value.ToString();
+            personelAdresTxt.Text = dataGridView1.SelectedRows[0].Cells["Adres"].Value.ToString();
+            personelMailTxt.Text = dataGridView1.SelectedRows[0].Cells["E-Mail"].Value.ToString();
             bolumCombo.SelectedIndex = bolumCombo.Items.IndexOf(dataGridView1.SelectedRows[0].Cells["Bölüm Adı"].Value.ToString());
-            personelID= dataGridView1.SelectedRows[0].Cells["Personel Numarası"].Value.ToString();
+            personelID = dataGridView1.SelectedRows[0].Cells["Personel Numarası"].Value.ToString();
         }
 
         private void personelTelefonTxt_KeyPress(object sender, KeyPressEventArgs e)

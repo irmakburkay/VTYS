@@ -42,10 +42,10 @@ namespace CAS
             if (ekleRadio.Checked) check = 0;
             else if (guncelleRadio.Checked) check = 1;
             else if (silRadio.Checked) check = 2;
-            switch(check)
+            switch (check)
             {
                 case 0:     //ekleme işlemi 
-                    if (!(turCombo.SelectedIndex == -1 || icerikAdıTxt.Text==""))     //eklenecek veriler boş bırakılmadıysa ekleme işlemi yap
+                    if (!(turCombo.SelectedIndex == -1 || icerikAdıTxt.Text == ""))     //eklenecek veriler boş bırakılmadıysa ekleme işlemi yap
                     {
                         mssql.sqlIslem("insert into icerik values('" + mssql.sqlString("select turID from tur where turAdi='" + turCombo.SelectedItem + "'") + "','" + icerikAdıTxt.Text + "')");
                         MessageBox.Show("Yeni Kayıt Başarıyla Eklendi!");
@@ -54,7 +54,7 @@ namespace CAS
                         MessageBox.Show("Lütfen Alanları Boş Bırakmayın!");
                     break;
                 case 1:     //güncelleme işlemi
-                    if (icerikID!="0")
+                    if (icerikID != "0")
                     {
                         if (mssql.sqlString("select count(*) from icerik where icerikID=" + icerikID).Equals("1"))      //güncellenecek kayıt bulunuyorsa ilgili verilerle güncelleme yap
                         {
@@ -68,7 +68,7 @@ namespace CAS
                         MessageBox.Show("Lütfen Bir Kayıt Seçin!");
                     break;
                 case 2:     //silme işlemi
-                    if (icerikID!="0")
+                    if (icerikID != "0")
                     {
                         if (mssql.sqlString("select count(*) from icerik where icerikID=" + icerikID).Equals("1"))        //ilgili kayıt varsa silme işlemi yap
                         {
@@ -85,7 +85,7 @@ namespace CAS
                     MessageBox.Show("Lütfen Bir Seçenek Seçin!");
                     break;
             }
-            if(check!=-1)        //eğer bir işlem yapılmışsa sayfayı yeniden yükle
+            if (check != -1)        //eğer bir işlem yapılmışsa sayfayı yeniden yükle
                 dergiGazeteEkle_Load(sender, e);
         }
     }

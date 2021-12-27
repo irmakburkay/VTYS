@@ -36,7 +36,7 @@ namespace CAS
 
         public void dtgfiltrele()
         {
-            string baslangicsql = " like '%' ", bitissql = " like '%' ",adsql= " like '%' ", iceriksql= " like '%' ";
+            string baslangicsql = " like '%' ", bitissql = " like '%' ", adsql = " like '%' ", iceriksql = " like '%' ";
             if (baslangic_cb.Checked)
                 baslangicsql = " ='" + baslangıcDate.Value.ToString("yyyy-MM-dd") + "' ";
             if (bitis_cb.Checked)
@@ -44,7 +44,7 @@ namespace CAS
             if (aboneAdıCombo.SelectedItem != "" && aboneAdıCombo.SelectedItem != null)
                 adsql = " ='" + aboneAdıCombo.SelectedItem.ToString().Substring(0, aboneAdıCombo.SelectedItem.ToString().IndexOf(" ")) + "' ";
             if (icerikAdıCombo.SelectedItem != "" && icerikAdıCombo.SelectedItem != null)
-                iceriksql = " ='" + mssql.sqlString("select icerikID from icerik where icerikAdi = '"+ icerikAdıCombo.SelectedItem + "'") + "' ";
+                iceriksql = " ='" + mssql.sqlString("select icerikID from icerik where icerikAdi = '" + icerikAdıCombo.SelectedItem + "'") + "' ";
             dataGridView1.DataSource = mssql.sqlTablo("select abonelikID as 'Abonelik Numarası'," +     //datagridview içini veritabanından dolduran kod
                 "ltrim(str(abone.aboneID))+' - '+ad+' '+soyad as 'Abone'," +
                 "icerikAdi as 'İçerik Adı'," +
@@ -52,10 +52,10 @@ namespace CAS
                 "bitisTarih as 'Bitiş Tarihi' " +
                 "from abonelik,icerik,abone " +
                 "where icerik.icerikID=abonelik.icerikID and abone.aboneID=abonelik.aboneID and " +
-                "abonelik.aboneID"+ adsql +" and " +
-                "icerik.icerikID"+ iceriksql +" and " +
-                "baslangicTarih"+ baslangicsql +"and " +
-                "bitisTarih"+ bitissql +"");
+                "abonelik.aboneID" + adsql + " and " +
+                "icerik.icerikID" + iceriksql + " and " +
+                "baslangicTarih" + baslangicsql + "and " +
+                "bitisTarih" + bitissql + "");
         }
 
         private void aboneAdıCombo_SelectedIndexChanged(object sender, EventArgs e)
@@ -86,6 +86,12 @@ namespace CAS
         private void bitis_cb_CheckedChanged(object sender, EventArgs e)
         {
             dtgfiltrele();
+        }
+
+        private void export_Click(object sender, EventArgs e)
+        {
+            formlar fm = new formlar();
+            fm.raporla(dataGridView1);
         }
     }
 }

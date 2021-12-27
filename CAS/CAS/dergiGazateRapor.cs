@@ -19,7 +19,7 @@ namespace CAS
 
         private void dergiGazateRapor_Load(object sender, EventArgs e)
         {
-            turCombo.Items.Add(""); 
+            turCombo.Items.Add("");
             foreach (DataRow row in mssql.sqlTablo("select turAdi from tur").Rows)       //comboBox daki elemanları veritabanından çeken kod
                 turCombo.Items.Add(row.ItemArray[0].ToString());
             dataGridView1.DataSource = mssql.sqlTablo("select icerikID as 'İçerik Numarası',icerikAdi as 'İçerik Adı',turAdi as 'Tür Adı' from icerik,tur where icerik.turID = tur.turID");        //datagridview içini veritabanından dolduran kod
@@ -28,7 +28,7 @@ namespace CAS
 
         public void dtgfiltrele()
         {
-            string tursql = " like '%' ", iceriksql = " like '%"+icerikAdıTxt.Text+"%' ";
+            string tursql = " like '%' ", iceriksql = " like '%" + icerikAdıTxt.Text + "%' ";
             if (turCombo.SelectedItem != "" && turCombo.SelectedItem != null)
                 tursql = " ='" + mssql.sqlString("select turID from tur where turAdi = '" + turCombo.SelectedItem + "'") + "' ";
             dataGridView1.DataSource = mssql.sqlTablo("select icerikID as 'İçerik Numarası',icerikAdi as 'İçerik Adı',tur.turAdi as 'Tür Adı' " +
@@ -46,6 +46,12 @@ namespace CAS
         private void turCombo_SelectedIndexChanged(object sender, EventArgs e)
         {
             dtgfiltrele();
+        }
+
+        private void export_Click(object sender, EventArgs e)
+        {
+            formlar fm = new formlar();
+            fm.raporla(dataGridView1);
         }
     }
 }

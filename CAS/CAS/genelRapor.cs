@@ -37,5 +37,11 @@ namespace CAS
                     dgvrow.Cells["Tür"].Value = mssql.sqlString("select turAdi from tur where turID='" + dgvrow.Cells["Tür"].Value.ToString() + "'");
             }
         }
+
+        private void export_Click(object sender, EventArgs e)
+        {
+            formlar fm = new formlar();
+            fm.raporla(dataGridView);
+        }
     }
 }

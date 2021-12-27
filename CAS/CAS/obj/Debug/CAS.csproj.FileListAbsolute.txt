@@ -51,3 +51,5 @@ C:\Users\Burkay\Documents\GitHub\VTYS\CAS\CAS\obj\Debug\CAS.fiyatRapor.resources
 C:\Users\Burkay\Documents\GitHub\VTYS\CAS\CAS\obj\Debug\CAS.genelRapor.resources
 C:\Users\Burkay\Documents\GitHub\VTYS\CAS\CAS\obj\Debug\CAS.personelRapor.resources
 C:\Users\Burkay\Documents\GitHub\VTYS\CAS\CAS\obj\Debug\CAS.turRapor.resources
+C:\Users\musta\source\repos\irmakburkay\VTYS\CAS\CAS\obj\Debug\CAS.csproj.ResolveComReference.cache
+C:\Users\musta\source\repos\irmakburkay\VTYS\CAS\CAS\obj\Debug\CAS.genelRapor.resources

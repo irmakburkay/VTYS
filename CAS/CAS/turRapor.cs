@@ -27,9 +27,9 @@ namespace CAS
 
         public void dtgfiltrele()
         {
-            string tursql = " like '%"+turBaslıkTxt.Text+"%' ", fiyatsql = " like '%' ";
+            string tursql = " like '%" + turBaslıkTxt.Text + "%' ", fiyatsql = " like '%' ";
             if (fiyatCombo.SelectedItem != "" && fiyatCombo.SelectedItem != null)
-                fiyatsql = " ='" + mssql.sqlString("select fiyatID from fiyat where ucret = '" + fiyatCombo.SelectedItem.ToString().Replace(',','.') + "'") + "' ";
+                fiyatsql = " ='" + mssql.sqlString("select fiyatID from fiyat where ucret = '" + fiyatCombo.SelectedItem.ToString().Replace(',', '.') + "'") + "' ";
             dataGridView1.DataSource = mssql.sqlTablo("select turID as 'Tür Numarası',turAdi as 'Tür Adı',ucret as 'Fiyat' " +
                 "from tur,fiyat " +
                 "where fiyat.fiyatID = tur.fiyatID and " +
@@ -46,6 +46,12 @@ namespace CAS
         private void fiyatCombo_SelectedIndexChanged(object sender, EventArgs e)
         {
             dtgfiltrele();
+        }
+
+        private void export_Click(object sender, EventArgs e)
+        {
+            formlar fm = new formlar();
+            fm.raporla(dataGridView1);
         }
     }
 }

@@ -40,8 +40,17 @@ namespace CAS
 
         private void export_Click(object sender, EventArgs e)
         {
-            formlar fm = new formlar();
-            fm.raporla(dataGridView);
+            raporla(dataGridView);
+        }
+
+        private void icerikAded_rb_CheckedChanged(object sender, EventArgs e)
+        {
+            if (icerikAded_rb.Checked)
+            {
+                dataGridView.DataSource = mssql.sqlTablo("exec icerik_adet");
+                foreach (DataGridViewRow dgvrow in dataGridView.Rows)
+                    dgvrow.Cells["İçerik Adı"].Value = mssql.sqlString("select icerikAdi from icerik where icerikID='" + dgvrow.Cells["İçerik Adı"].Value.ToString() + "'");
+            }
         }
     }
 }

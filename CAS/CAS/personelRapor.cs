@@ -103,8 +103,7 @@ namespace CAS
 
         private void export_Click(object sender, EventArgs e)
         {
-            formlar fm = new formlar();
-            fm.raporla(dataGridView1);
+            raporla(dataGridView1);
         }
     }
 }

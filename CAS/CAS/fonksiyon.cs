@@ -19,8 +19,8 @@ namespace CAS
             main.mainPanel.Width = f.Width;
             main.mainPanel.Height = f.Height;
             main.mainPanel.Controls.Add(f);
-            main.Width = f.Width + 40;
-            main.Height = f.Height + 83;
+            main.Width = f.Width + 18;
+            main.Height = f.Height + 49;
             f.Show();
         }
         public string kulAdi = string.Empty, kulSifre = string.Empty;

@@ -25,8 +25,6 @@ namespace CAS
             aboneAdıCombo.SelectedIndex = -1;
             aboneAdıCombo.Text = "";
             aboneAdıCombo.Items.Clear();
-            //mssql.sqlTablo("select ltrim(str(aboneID))+' - '+ad+' '+soyad from abone")
-            //mssql.sqlTablo("select ltrim(str(icerikID))+' - '+icerikAdi from icerik")
             foreach (DataRow row in mssql.sqlTablo("select ltrim(str(aboneID))+' - '+ad+' '+soyad from abone").Rows)       //comboBox daki elemanları veritabanından çeken kod
                 aboneAdıCombo.Items.Add(row.ItemArray[0].ToString());
             icerikAdıCombo.SelectedIndex = -1;

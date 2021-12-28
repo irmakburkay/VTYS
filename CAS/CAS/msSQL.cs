@@ -23,19 +23,6 @@ namespace CAS
             command.Connection = connection;                //command nesnesinin bağlantısını connection olarak atıyor (komutların üzerinde çalışacağı veritabanını belirliyor)
         }
 
-        public msSQL(string user, string password)
-        {
-            try
-            {
-                connection = new SqlConnection("Server=localhost;Database=JAS;user ID=" + user + ";password=" + password + ";Trusted_Connection=True;");
-                command.Connection = connection;                //command nesnesinin bağlantısını connection olarak atıyor (komutların üzerinde çalışacağı veritabanını belirliyor)
-            }
-            catch (SqlException e)
-            {
-                MessageBox.Show(e.Message);
-                throw;
-            }
-        }
 
         public void sqlIslem(String sql)                    //veritabanından veri döndürmeden sadece sql komutlarını çalıştıran fonksiyon
         {

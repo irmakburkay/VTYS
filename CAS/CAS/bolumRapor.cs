@@ -24,7 +24,12 @@ namespace CAS
 
         private void bolumAdıTxt_TextChanged(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = mssql.sqlTablo("select bolumID as 'Bölüm Numarası',bolumAdi as 'Bölüm Adı', yetkiTipi as 'Yetki Seviyesi' from bolum where bolumAdi like '%" + bolumAdıTxt.Text + "%' and yetkiTipi like '%" + (comboBox1.SelectedIndex + 1).ToString() + "%'");
+            string yetki;
+            if (comboBox1.SelectedIndex > 0)
+                yetki = (comboBox1.SelectedItem.ToString().Substring(0, comboBox1.SelectedItem.ToString().IndexOf(" "))).ToString();
+            else
+                yetki = "";
+            dataGridView1.DataSource = mssql.sqlTablo("select bolumID as 'Bölüm Numarası',bolumAdi as 'Bölüm Adı', yetkiTipi as 'Yetki Seviyesi' from bolum where bolumAdi like '%" + bolumAdıTxt.Text + "%' and yetkiTipi like '%" + yetki + "%'");
         }
 
         private void export_Click(object sender, EventArgs e)
@@ -34,7 +39,12 @@ namespace CAS
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = mssql.sqlTablo("select bolumID as 'Bölüm Numarası',bolumAdi as 'Bölüm Adı', yetkiTipi as 'Yetki Seviyesi' from bolum where bolumAdi like '%" + bolumAdıTxt.Text + "%' and yetkiTipi like '%" + (comboBox1.SelectedIndex + 1).ToString() + "%'");
+            string yetki;
+            if (comboBox1.SelectedIndex > 0)
+                yetki = (comboBox1.SelectedItem.ToString().Substring(0, comboBox1.SelectedItem.ToString().IndexOf(" "))).ToString();
+            else
+                yetki = "";
+            dataGridView1.DataSource = mssql.sqlTablo("select bolumID as 'Bölüm Numarası',bolumAdi as 'Bölüm Adı', yetkiTipi as 'Yetki Seviyesi' from bolum where bolumAdi like '%" + bolumAdıTxt.Text + "%' and yetkiTipi like '%" + yetki + "%'"); ;
         }
     }
 }

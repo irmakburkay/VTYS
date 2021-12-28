@@ -45,7 +45,7 @@
             // bolumAdıTxt
             // 
             this.bolumAdıTxt.Location = new System.Drawing.Point(96, 21);
-            this.bolumAdıTxt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bolumAdıTxt.Margin = new System.Windows.Forms.Padding(4);
             this.bolumAdıTxt.Name = "bolumAdıTxt";
             this.bolumAdıTxt.Size = new System.Drawing.Size(132, 22);
             this.bolumAdıTxt.TabIndex = 0;
@@ -67,9 +67,9 @@
             this.groupBox1.Controls.Add(this.ekleRadio);
             this.groupBox1.Controls.Add(this.turKaydetBtn);
             this.groupBox1.Location = new System.Drawing.Point(422, 13);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox1.Size = new System.Drawing.Size(201, 108);
             this.groupBox1.TabIndex = 27;
             this.groupBox1.TabStop = false;
@@ -78,7 +78,7 @@
             // 
             this.guncelleRadio.AutoSize = true;
             this.guncelleRadio.Location = new System.Drawing.Point(97, 75);
-            this.guncelleRadio.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guncelleRadio.Margin = new System.Windows.Forms.Padding(4);
             this.guncelleRadio.Name = "guncelleRadio";
             this.guncelleRadio.Size = new System.Drawing.Size(85, 21);
             this.guncelleRadio.TabIndex = 22;
@@ -90,7 +90,7 @@
             // 
             this.silRadio.AutoSize = true;
             this.silRadio.Location = new System.Drawing.Point(97, 47);
-            this.silRadio.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.silRadio.Margin = new System.Windows.Forms.Padding(4);
             this.silRadio.Name = "silRadio";
             this.silRadio.Size = new System.Drawing.Size(44, 21);
             this.silRadio.TabIndex = 23;
@@ -102,7 +102,7 @@
             // 
             this.ekleRadio.AutoSize = true;
             this.ekleRadio.Location = new System.Drawing.Point(97, 18);
-            this.ekleRadio.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ekleRadio.Margin = new System.Windows.Forms.Padding(4);
             this.ekleRadio.Name = "ekleRadio";
             this.ekleRadio.Size = new System.Drawing.Size(56, 21);
             this.ekleRadio.TabIndex = 24;
@@ -113,7 +113,7 @@
             // turKaydetBtn
             // 
             this.turKaydetBtn.Location = new System.Drawing.Point(8, 12);
-            this.turKaydetBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.turKaydetBtn.Margin = new System.Windows.Forms.Padding(4);
             this.turKaydetBtn.Name = "turKaydetBtn";
             this.turKaydetBtn.Size = new System.Drawing.Size(81, 33);
             this.turKaydetBtn.TabIndex = 2;
@@ -128,7 +128,7 @@
             this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCellsExceptHeaders;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(20, 130);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersVisible = false;
@@ -143,12 +143,13 @@
             this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
+            "",
             "1 - Yönetici",
             "2 - Satıcı",
             "3 - Çalışan",
             "4 - Misafir"});
             this.comboBox1.Location = new System.Drawing.Point(96, 54);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(132, 24);
             this.comboBox1.TabIndex = 1;
@@ -176,7 +177,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "bolum";
             this.Text = "bolumEkle";
             this.Load += new System.EventHandler(this.bolumEkle_Load);

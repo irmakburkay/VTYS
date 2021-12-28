@@ -85,19 +85,19 @@ namespace CAS
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (comboBox1.SelectedIndex == 0)
+            if (comboBox1.SelectedIndex == 1)
             {
                 yetki = "1";
             }
-            else if (comboBox1.SelectedIndex == 1)
+            else if (comboBox1.SelectedIndex == 2)
             {
                 yetki = "2";
             }
-            else if (comboBox1.SelectedIndex == 2)
+            else if (comboBox1.SelectedIndex == 3)
             {
                 yetki = "3";
             }
-            else if (comboBox1.SelectedIndex == 3)
+            else if (comboBox1.SelectedIndex == 4)
             {
                 yetki = "4";
             }

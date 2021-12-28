@@ -26,11 +26,6 @@ namespace CAS
         {
             kullaniciGiris kgs = Application.OpenForms["kullaniciGiris"] as kullaniciGiris;
             string bolum = string.Empty;
-            //abonelik rapor, içerik rapor
-            //0 herşey açık
-            //1 database personel bolumdüzenle kapalı
-            //2 database personel tüm düzenlemelere kapalı genel rapor açık
-            //3 tüm raporlar (personel hariç) genel rapor kapalı
             int check = -1;
             if (kgs.blm == "1") check = 0;
             if (kgs.blm == "2") check = 1;
@@ -220,7 +215,6 @@ namespace CAS
                 throw;
             }
         }
-
 
         private void geriYükleToolStripMenuItem_Click(object sender, EventArgs e)
         {
